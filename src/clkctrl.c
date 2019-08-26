@@ -54,7 +54,7 @@ int8_t CLKCTRL_init()
 	// ccp_write_io((void*)&(CLKCTRL.OSC20MCTRLA),0 << CLKCTRL_RUNSTDBY_bp /* Run standby: disabled */);
 
 	ccp_write_io((void *)&(CLKCTRL.MCLKCTRLB),
-	             CLKCTRL_PDIV_2X_gc /* 2 */
+	             CLKCTRL_PDIV_8X_gc /* 8 */
 	                 | 1 << CLKCTRL_PEN_bp /* Prescaler enable: enabled */);
 
 	// ccp_write_io((void*)&(CLKCTRL.MCLKCTRLA),CLKCTRL_CLKSEL_OSC20M_gc /* 20MHz Internal Oscillator (OSC20M) */

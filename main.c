@@ -12,6 +12,7 @@
 #include "winc/driver/source/nmasic.h"
 #include "winc/socket/include/socket.h"
 #include "winc/socket/include/m2m_socket_host_if.h"
+#include "motoare.h"
 
 int usart_putchar_printf(char var, FILE *stream);
 
@@ -63,6 +64,19 @@ int c;
 char buffer[MAX_LENGTH];
 int index;
 volatile char data_response;
+char order[10];
+
+void get_command(char *str,tstrSocketRecvMsg *pCommand){
+
+int i=0;
+while(*(pCommand->pu8Buffer+i) != 0x0D){
+ 	
+	*(str+i)=*(pCommand->pu8Buffer+i);
+	i++;
+	
+}
+
+}
 
 
 /**
@@ -143,9 +157,21 @@ static void socket_cb(SOCKET sock, uint8_t u8Msg, void *pvMsg)
 		tstrSocketRecvMsg *pstrRecv = (tstrSocketRecvMsg *)pvMsg;
 		if (pstrRecv && pstrRecv->s16BufferSize > 0) {
 			printf("socket_cb: recv success!\r\n");
-			char c;
-			c=*(pstrRecv->pu8Buffer);
-			printf("%c \r\n",*(pstrRecv->pu8Buffer));
+			
+			get_command(order, pstrRecv);
+			if(strcmp(order,"rotate")==0){
+				
+				motor_start_left_wheel();
+				motor_start_right_wheel();
+				motor_reverse_left_wheel();
+				printf("rotating !!");
+				
+			}
+			
+			
+			
+			printf("%s \n \r ",order);
+			
 			send(tcp_client_socket, &msg_wifi_product, sizeof(msg_wifi_product), 0);
 		} else {
 			printf("socket_cb: recv error!\r\n");
@@ -219,8 +245,13 @@ int main(void){
 	// Redirect stream to Tera Term
 	stdout = &mystdout;
 	/* Initializes MCU, drivers and middleware */
+	
 	atmel_start_init();
-
+	motor_dir_port_init();
+	LEFT_WHEEL_TCB3_PWM_init();
+	RIGHT_WHEEL_TCB1_PWM_init();
+	
+	
 	sei();
 
 	/* Initialize BSP */
@@ -276,7 +307,7 @@ int main(void){
 	m2m_wifi_connect(
 	(char *)MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), MAIN_WLAN_AUTH, (char *)MAIN_WLAN_PSK, M2M_WIFI_CH_ALL);
 
-	PORTB.DIR |= PIN5_bm;
+
 	
 while (1) {
 	

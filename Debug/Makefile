@@ -68,6 +68,7 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../atmel_start.c \
+../motoare.c \
 ../winc_init.c \
 ../driver_isr.c \
 ../examples/src/spi_basic_example.c \
@@ -113,6 +114,7 @@ ASM_SRCS +=
 
 OBJS +=  \
 atmel_start.o \
+motoare.o \
 winc_init.o \
 driver_isr.o \
 examples/src/spi_basic_example.o \
@@ -151,6 +153,7 @@ winc/spi_flash/source/spi_flash.o
 
 OBJS_AS_ARGS +=  \
 atmel_start.o \
+motoare.o \
 winc_init.o \
 driver_isr.o \
 examples/src/spi_basic_example.o \
@@ -189,6 +192,7 @@ winc/spi_flash/source/spi_flash.o
 
 C_DEPS +=  \
 atmel_start.d \
+motoare.d \
 winc_init.d \
 driver_isr.d \
 examples/src/spi_basic_example.d \
@@ -227,6 +231,7 @@ winc/spi_flash/source/spi_flash.d
 
 C_DEPS_AS_ARGS +=  \
 atmel_start.d \
+motoare.d \
 winc_init.d \
 driver_isr.d \
 examples/src/spi_basic_example.d \
@@ -278,6 +283,13 @@ LINKER_SCRIPT_DEP+=
 
 # AVR32/GNU C Compiler
 ./atmel_start.o: .././atmel_start.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./motoare.o: .././motoare.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

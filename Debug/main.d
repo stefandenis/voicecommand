@@ -34,7 +34,7 @@ main.d main.o: .././main.c ../atmel_start.h ../include/driver_init.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
  .././winc/driver/source/nmasic.h .././winc/socket/include/socket.h \
  .././winc/socket/include/m2m_socket_host_if.h \
- ../winc/socket/include/socket.h
+ ../winc/socket/include/socket.h .././motoare.h
 
 ../atmel_start.h:
 
@@ -139,3 +139,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 .././winc/socket/include/m2m_socket_host_if.h:
 
 ../winc/socket/include/socket.h:
+
+.././motoare.h:

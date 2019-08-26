@@ -4,6 +4,8 @@
 
 atmel_start.c
 
+motoare.c
+
 winc_init.c
 
 driver_isr.c
