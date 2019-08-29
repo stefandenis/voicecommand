@@ -65,6 +65,11 @@ void motor_start_left_wheel(){
 	TCB3.CCMPH = 0xC8; // change duty cycle
 	TCB3.CNT = 0x00;
 	TCB3.CTRLA |=  TCB_ENABLE_bm; // re-enable TCB3;
+	
+	/* Start means always going forward */
+	PORTE.OUT &= ~PIN2_bm;
+	PORTE.OUT |= PIN3_bm;
+	
 }
 
 
@@ -85,6 +90,10 @@ void motor_start_right_wheel(){
 	TCB1.CCMPH = 0xC8; // change duty cycle
 	TCB1.CNT = 0x00;
 	TCB1.CTRLA |= TCB_ENABLE_bm; // re-enable TCB3;
+	
+	/* Start means always going forward */
+	PORTF.OUT &= ~PIN6_bm;
+	PORTF.OUT |= PIN4_bm;
 }
 
 
@@ -105,6 +114,6 @@ void motor_reverse_left_wheel(){
 
 void motor_reverse_right_wheel(){
 	
-	PORTF.OUT ^= PIN5_bm;
+	PORTF.OUT ^= PIN6_bm;
 	PORTF.OUT ^= PIN4_bm;
 }

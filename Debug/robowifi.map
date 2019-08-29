@@ -1,35 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(cmpsf2.o)
-                              winc/bsp/source/nm_bsp_mega.o (__ltsf2)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o)
-                              winc/bsp/source/nm_bsp_mega.o (__fixunssfsi)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_cmp.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(cmpsf2.o) (__fp_cmp)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_split3.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o) (__fp_splitA)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_zero.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o) (__fp_zero)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(gesf2.o)
-                              winc/bsp/source/nm_bsp_mega.o (__gtsf2)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o)
-                              winc/bsp/source/nm_bsp_mega.o (__mulsf3)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o) (__mulsf3x)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_inf.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o) (__fp_inf)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_nan.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o) (__fp_nan)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscA.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o) (__fp_pscA)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscB.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o) (__fp_pscB)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_round.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o) (__fp_round)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
                               winc/socket/source/socket.o (__divmodhi4)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
-                              winc/spi_flash/source/spi_flash.o (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_tablejump2.o)
@@ -40,8 +12,6 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               examples/src/timeout_example.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodhi4.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o) (__udivmodhi4)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(memset.o)
-                              winc_init.o (memset)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strcmp.o)
                               main.o (strcmp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strncmp.o)
@@ -97,12 +67,10 @@ Discarded input sections
  .text          0x00000000        0x0 motoare.o
  .data          0x00000000        0x0 motoare.o
  .bss           0x00000000        0x0 motoare.o
- .text.motor_stop_left_wheel
-                0x00000000       0x50 motoare.o
- .text.motor_stop_right_wheel
-                0x00000000       0x50 motoare.o
- .text.motor_reverse_right_wheel
-                0x00000000       0x38 motoare.o
+ .text.LEFT_WHEEL_TCB3_PWM_init
+                0x00000000       0x34 motoare.o
+ .text.RIGHT_WHEEL_TCB1_PWM_init
+                0x00000000       0x3a motoare.o
  .text          0x00000000        0x0 winc_init.o
  .data          0x00000000        0x0 winc_init.o
  .bss           0x00000000        0x0 winc_init.o
@@ -119,61 +87,58 @@ Discarded input sections
  .text          0x00000000        0x0 examples/src/spi_basic_example.o
  .data          0x00000000        0x0 examples/src/spi_basic_example.o
  .bss           0x00000000        0x0 examples/src/spi_basic_example.o
- .data.buffer   0x00000000       0x10 examples/src/spi_basic_example.o
- .text.drive_slave_select_low
-                0x00000000       0x10 examples/src/spi_basic_example.o
- .text.drive_slave_select_high
-                0x00000000       0x10 examples/src/spi_basic_example.o
- .rodata        0x00000000        0x5 examples/src/spi_basic_example.o
+ .rodata.str1.1
+                0x00000000        0x5 examples/src/spi_basic_example.o
  .text.SPI_0_test_spi_basic
-                0x00000000       0x3a examples/src/spi_basic_example.o
- .debug_info    0x00000000       0xe0 examples/src/spi_basic_example.o
- .debug_abbrev  0x00000000       0x8a examples/src/spi_basic_example.o
- .debug_loc     0x00000000       0xb1 examples/src/spi_basic_example.o
+                0x00000000       0x26 examples/src/spi_basic_example.o
+ .data.buffer   0x00000000       0x10 examples/src/spi_basic_example.o
+ .debug_info    0x00000000      0x127 examples/src/spi_basic_example.o
+ .debug_abbrev  0x00000000       0xbe examples/src/spi_basic_example.o
  .debug_aranges
-                0x00000000       0x30 examples/src/spi_basic_example.o
- .debug_ranges  0x00000000       0x20 examples/src/spi_basic_example.o
- .debug_line    0x00000000      0x109 examples/src/spi_basic_example.o
- .debug_str     0x00000000      0x1cc examples/src/spi_basic_example.o
+                0x00000000       0x20 examples/src/spi_basic_example.o
+ .debug_ranges  0x00000000       0x10 examples/src/spi_basic_example.o
+ .debug_line    0x00000000       0xeb examples/src/spi_basic_example.o
+ .debug_str     0x00000000      0x1ba examples/src/spi_basic_example.o
  .comment       0x00000000       0x31 examples/src/spi_basic_example.o
- .debug_frame   0x00000000       0x74 examples/src/spi_basic_example.o
+ .debug_frame   0x00000000       0x24 examples/src/spi_basic_example.o
  .text          0x00000000        0x0 examples/src/timeout_example.o
  .data          0x00000000        0x0 examples/src/timeout_example.o
  .bss           0x00000000        0x0 examples/src/timeout_example.o
- .bss.a         0x00000000        0x1 examples/src/timeout_example.o
- .bss.b         0x00000000        0x1 examples/src/timeout_example.o
- .bss.cycles    0x00000000        0x2 examples/src/timeout_example.o
- .text.foo      0x00000000       0x5e examples/src/timeout_example.o
- .text.bar      0x00000000       0x1e examples/src/timeout_example.o
+ .text.foo      0x00000000       0x24 examples/src/timeout_example.o
+ .text.bar      0x00000000        0xe examples/src/timeout_example.o
  .text.scheduler_test_timeout
-                0x00000000       0xcc examples/src/timeout_example.o
- .debug_info    0x00000000      0x1ed examples/src/timeout_example.o
- .debug_abbrev  0x00000000       0xf9 examples/src/timeout_example.o
- .debug_loc     0x00000000       0xca examples/src/timeout_example.o
+                0x00000000       0xde examples/src/timeout_example.o
+ .bss.cycles    0x00000000        0x2 examples/src/timeout_example.o
+ .bss.b         0x00000000        0x1 examples/src/timeout_example.o
+ .bss.a         0x00000000        0x1 examples/src/timeout_example.o
+ .debug_info    0x00000000      0x2d8 examples/src/timeout_example.o
+ .debug_abbrev  0x00000000      0x149 examples/src/timeout_example.o
+ .debug_loc     0x00000000       0xd1 examples/src/timeout_example.o
  .debug_aranges
                 0x00000000       0x30 examples/src/timeout_example.o
  .debug_ranges  0x00000000       0x20 examples/src/timeout_example.o
- .debug_line    0x00000000      0x1a1 examples/src/timeout_example.o
- .debug_str     0x00000000      0x23a examples/src/timeout_example.o
+ .debug_line    0x00000000      0x185 examples/src/timeout_example.o
+ .debug_str     0x00000000      0x2cc examples/src/timeout_example.o
  .comment       0x00000000       0x31 examples/src/timeout_example.o
- .debug_frame   0x00000000       0x74 examples/src/timeout_example.o
+ .debug_frame   0x00000000       0x60 examples/src/timeout_example.o
  .text          0x00000000        0x0 examples/src/usart_basic_example.o
  .data          0x00000000        0x0 examples/src/usart_basic_example.o
  .bss           0x00000000        0x0 examples/src/usart_basic_example.o
- .bss.rx        0x00000000       0x10 examples/src/usart_basic_example.o
- .rodata        0x00000000        0x9 examples/src/usart_basic_example.o
+ .rodata.str1.1
+                0x00000000        0x9 examples/src/usart_basic_example.o
  .text.USART_0_test_usart_basic
-                0x00000000       0x98 examples/src/usart_basic_example.o
- .debug_info    0x00000000       0xc6 examples/src/usart_basic_example.o
- .debug_abbrev  0x00000000       0x76 examples/src/usart_basic_example.o
- .debug_loc     0x00000000       0x62 examples/src/usart_basic_example.o
+                0x00000000       0x6e examples/src/usart_basic_example.o
+ .bss.rx        0x00000000       0x10 examples/src/usart_basic_example.o
+ .debug_info    0x00000000      0x13f examples/src/usart_basic_example.o
+ .debug_abbrev  0x00000000       0xcd examples/src/usart_basic_example.o
+ .debug_loc     0x00000000       0xbe examples/src/usart_basic_example.o
  .debug_aranges
                 0x00000000       0x20 examples/src/usart_basic_example.o
  .debug_ranges  0x00000000       0x10 examples/src/usart_basic_example.o
- .debug_line    0x00000000      0x10b examples/src/usart_basic_example.o
- .debug_str     0x00000000      0x19c examples/src/usart_basic_example.o
+ .debug_line    0x00000000      0x12c examples/src/usart_basic_example.o
+ .debug_str     0x00000000      0x1b8 examples/src/usart_basic_example.o
  .comment       0x00000000       0x31 examples/src/usart_basic_example.o
- .debug_frame   0x00000000       0x40 examples/src/usart_basic_example.o
+ .debug_frame   0x00000000       0x4c examples/src/usart_basic_example.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -190,60 +155,53 @@ Discarded input sections
  .text          0x00000000        0x0 src/driver_init.o
  .data          0x00000000        0x0 src/driver_init.o
  .bss           0x00000000        0x0 src/driver_init.o
- .text.PORTD_set_pin_pull_mode
-                0x00000000       0x62 src/driver_init.o
- .text.PORTD_pin_set_isc
-                0x00000000       0x46 src/driver_init.o
- .text.PD6_set_pull_mode
-                0x00000000       0x1e src/driver_init.o
- .text.PD6_set_isc
-                0x00000000       0x1e src/driver_init.o
  .text.ADC_0_initialization
-                0x00000000       0x20 src/driver_init.o
+                0x00000000       0x18 src/driver_init.o
  .text          0x00000000        0x0 src/fingerprint.o
  .data          0x00000000        0x0 src/fingerprint.o
  .bss           0x00000000        0x0 src/fingerprint.o
  .text.write_buffer
-                0x00000000       0x54 src/fingerprint.o
+                0x00000000       0x32 src/fingerprint.o
  .text.read_buffer
-                0x00000000       0x60 src/fingerprint.o
+                0x00000000       0x34 src/fingerprint.o
  .text.copy_buffer
-                0x00000000       0x66 src/fingerprint.o
+                0x00000000       0x1a src/fingerprint.o
  .text.send_handshake
-                0x00000000      0x14a src/fingerprint.o
- .text.img      0x00000000      0x13e src/fingerprint.o
+                0x00000000      0x112 src/fingerprint.o
+ .text.img      0x00000000      0x108 src/fingerprint.o
  .text.img_to_tz
-                0x00000000      0x14e src/fingerprint.o
+                0x00000000      0x112 src/fingerprint.o
  .text.search_library
-                0x00000000      0x31e src/fingerprint.o
- .debug_info    0x00000000      0x787 src/fingerprint.o
- .debug_abbrev  0x00000000      0x128 src/fingerprint.o
- .debug_loc     0x00000000      0x2dc src/fingerprint.o
+                0x00000000      0x1fe src/fingerprint.o
+ .debug_info    0x00000000      0x95f src/fingerprint.o
+ .debug_abbrev  0x00000000      0x196 src/fingerprint.o
+ .debug_loc     0x00000000      0x68d src/fingerprint.o
  .debug_aranges
                 0x00000000       0x50 src/fingerprint.o
  .debug_ranges  0x00000000       0x40 src/fingerprint.o
- .debug_line    0x00000000      0x40f src/fingerprint.o
- .debug_str     0x00000000      0x307 src/fingerprint.o
+ .debug_line    0x00000000      0x35c src/fingerprint.o
+ .debug_str     0x00000000      0x322 src/fingerprint.o
  .comment       0x00000000       0x31 src/fingerprint.o
- .debug_frame   0x00000000      0x150 src/fingerprint.o
+ .debug_frame   0x00000000      0x144 src/fingerprint.o
  .text          0x00000000        0x0 src/http.o
  .data          0x00000000        0x0 src/http.o
  .bss           0x00000000        0x0 src/http.o
- .rodata        0x00000000       0x66 src/http.o
+ .rodata.str1.1
+                0x00000000       0x66 src/http.o
  .text.GET_request
-                0x00000000       0x6c src/http.o
+                0x00000000       0x32 src/http.o
  .text.POST_request
-                0x00000000       0x7a src/http.o
- .debug_info    0x00000000      0x122 src/http.o
- .debug_abbrev  0x00000000       0x90 src/http.o
- .debug_loc     0x00000000       0x8f src/http.o
+                0x00000000       0x4e src/http.o
+ .debug_info    0x00000000      0x147 src/http.o
+ .debug_abbrev  0x00000000       0xad src/http.o
+ .debug_loc     0x00000000      0x18f src/http.o
  .debug_aranges
                 0x00000000       0x28 src/http.o
  .debug_ranges  0x00000000       0x18 src/http.o
- .debug_line    0x00000000       0x84 src/http.o
- .debug_str     0x00000000      0x1bf src/http.o
+ .debug_line    0x00000000       0xe5 src/http.o
+ .debug_str     0x00000000      0x1b2 src/http.o
  .comment       0x00000000       0x31 src/http.o
- .debug_frame   0x00000000       0x54 src/http.o
+ .debug_frame   0x00000000       0x60 src/http.o
  .text          0x00000000        0x0 src/protected_io.o
  .data          0x00000000        0x0 src/protected_io.o
  .bss           0x00000000        0x0 src/protected_io.o
@@ -254,83 +212,87 @@ Discarded input sections
  .data          0x00000000        0x0 src/spi_basic.o
  .bss           0x00000000        0x0 src/spi_basic.o
  .text.SPI_0_disable
-                0x00000000       0x22 src/spi_basic.o
+                0x00000000        0xc src/spi_basic.o
  .text.SPI_0_exchange_block
-                0x00000000       0x70 src/spi_basic.o
+                0x00000000       0x22 src/spi_basic.o
  .text.SPI_0_write_block
-                0x00000000       0x60 src/spi_basic.o
+                0x00000000       0x20 src/spi_basic.o
  .text.SPI_0_read_block
-                0x00000000       0x68 src/spi_basic.o
+                0x00000000       0x20 src/spi_basic.o
  .text          0x00000000        0x0 src/timeout.o
  .data          0x00000000        0x0 src/timeout.o
  .bss           0x00000000        0x0 src/timeout.o
+ .text.scheduler_set_timer_duration
+                0x00000000       0x60 src/timeout.o
  .text.scheduler_make_absolute
-                0x00000000       0xbc src/timeout.o
+                0x00000000       0x76 src/timeout.o
  .text.scheduler_rebase_list
-                0x00000000       0xe0 src/timeout.o
+                0x00000000       0x64 src/timeout.o
  .text.scheduler_sorted_insert
-                0x00000000      0x17c src/timeout.o
+                0x00000000      0x170 src/timeout.o
  .text.scheduler_timeout_flush_all
-                0x00000000       0x1c src/timeout.o
+                0x00000000        0xe src/timeout.o
  .text.scheduler_timeout_delete
-                0x00000000       0xd6 src/timeout.o
- .text.scheduler_timeout_call_next_callback
-                0x00000000       0xa2 src/timeout.o
+                0x00000000       0x60 src/timeout.o
+ .text.scheduler_enqueue_callback
+                0x00000000       0x2e src/timeout.o
  .text.scheduler_timeout_create
-                0x00000000       0x88 src/timeout.o
+                0x00000000       0xa2 src/timeout.o
+ .text.scheduler_timeout_call_next_callback
+                0x00000000       0x52 src/timeout.o
  .text.scheduler_timeout_start_timer
-                0x00000000       0x4c src/timeout.o
+                0x00000000        0xe src/timeout.o
  .text.scheduler_timeout_stop_timer
-                0x00000000       0xc4 src/timeout.o
+                0x00000000       0x9c src/timeout.o
  .text          0x00000000        0x0 src/usart_basic.o
  .data          0x00000000        0x0 src/usart_basic.o
  .bss           0x00000000        0x0 src/usart_basic.o
  .text.USART_0_enable
-                0x00000000       0x22 src/usart_basic.o
+                0x00000000        0xc src/usart_basic.o
  .text.USART_0_enable_rx
-                0x00000000       0x22 src/usart_basic.o
+                0x00000000        0xc src/usart_basic.o
  .text.USART_0_enable_tx
-                0x00000000       0x22 src/usart_basic.o
+                0x00000000        0xc src/usart_basic.o
  .text.USART_0_disable
-                0x00000000       0x22 src/usart_basic.o
+                0x00000000        0xc src/usart_basic.o
  .text.USART_0_get_data
-                0x00000000       0x16 src/usart_basic.o
+                0x00000000        0x6 src/usart_basic.o
  .text.USART_0_is_tx_ready
-                0x00000000       0x28 src/usart_basic.o
+                0x00000000        0xc src/usart_basic.o
  .text.USART_0_is_rx_ready
-                0x00000000       0x28 src/usart_basic.o
+                0x00000000        0xc src/usart_basic.o
  .text.USART_0_is_tx_busy
-                0x00000000       0x28 src/usart_basic.o
+                0x00000000       0x10 src/usart_basic.o
  .text.USART_0_read
-                0x00000000       0x24 src/usart_basic.o
+                0x00000000       0x10 src/usart_basic.o
  .text.uart_puts
-                0x00000000       0x3e src/usart_basic.o
+                0x00000000       0x1e src/usart_basic.o
  .text          0x00000000        0x0 winc/bsp/source/nm_bsp_mega.o
  .data          0x00000000        0x0 winc/bsp/source/nm_bsp_mega.o
  .bss           0x00000000        0x0 winc/bsp/source/nm_bsp_mega.o
  .text.nm_bsp_deinit
-                0x00000000       0x10 winc/bsp/source/nm_bsp_mega.o
+                0x00000000        0x4 winc/bsp/source/nm_bsp_mega.o
  .text          0x00000000        0x0 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
  .data          0x00000000        0x0 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
  .bss           0x00000000        0x0 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
  .text.nm_bus_reinit
-                0x00000000       0x1a winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                0x00000000        0x4 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
  .text          0x00000000        0x0 winc/common/source/nm_common.o
  .data          0x00000000        0x0 winc/common/source/nm_common.o
  .bss           0x00000000        0x0 winc/common/source/nm_common.o
  .text.m2m_checksum
-                0x00000000       0x52 winc/common/source/nm_common.o
+                0x00000000       0x22 winc/common/source/nm_common.o
  .text.m2m_strncmp
-                0x00000000       0x90 winc/common/source/nm_common.o
+                0x00000000       0x52 winc/common/source/nm_common.o
  .text.m2m_strstr
-                0x00000000       0x92 winc/common/source/nm_common.o
+                0x00000000       0x70 winc/common/source/nm_common.o
  .text.m2m_memcmp
-                0x00000000       0x92 winc/common/source/nm_common.o
+                0x00000000       0x5a winc/common/source/nm_common.o
  .text          0x00000000        0x0 winc/driver/source/m2m_ate_mode.o
  .data          0x00000000        0x0 winc/driver/source/m2m_ate_mode.o
  .bss           0x00000000        0x0 winc/driver/source/m2m_ate_mode.o
  .debug_line    0x00000000        0x0 winc/driver/source/m2m_ate_mode.o
- .debug_str     0x00000000      0x11a winc/driver/source/m2m_ate_mode.o
+ .debug_str     0x00000000      0x105 winc/driver/source/m2m_ate_mode.o
  .comment       0x00000000       0x31 winc/driver/source/m2m_ate_mode.o
  .text          0x00000000        0x0 winc/driver/source/m2m_crypto.o
  .data          0x00000000        0x0 winc/driver/source/m2m_crypto.o
@@ -340,60 +302,60 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 winc/driver/source/m2m_crypto.o
  .debug_line    0x00000000       0x1a winc/driver/source/m2m_crypto.o
- .debug_str     0x00000000      0x185 winc/driver/source/m2m_crypto.o
+ .debug_str     0x00000000      0x170 winc/driver/source/m2m_crypto.o
  .comment       0x00000000       0x31 winc/driver/source/m2m_crypto.o
  .text          0x00000000        0x0 winc/driver/source/m2m_hif.o
  .data          0x00000000        0x0 winc/driver/source/m2m_hif.o
  .bss           0x00000000        0x0 winc/driver/source/m2m_hif.o
  .text.hif_set_sleep_mode
-                0x00000000       0x1c winc/driver/source/m2m_hif.o
+                0x00000000        0x6 winc/driver/source/m2m_hif.o
  .text.hif_get_sleep_mode
-                0x00000000       0x12 winc/driver/source/m2m_hif.o
+                0x00000000        0x6 winc/driver/source/m2m_hif.o
  .text.hif_deinit
-                0x00000000       0x38 winc/driver/source/m2m_hif.o
+                0x00000000       0x20 winc/driver/source/m2m_hif.o
  .text          0x00000000        0x0 winc/driver/source/m2m_ota.o
  .data          0x00000000        0x0 winc/driver/source/m2m_ota.o
  .bss           0x00000000        0x0 winc/driver/source/m2m_ota.o
- .bss.gpfOtaUpdateCb
-                0x00000000        0x2 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_cb
+                0x00000000       0xb4 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_init
+                0x00000000       0x28 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_notif_set_url
+                0x00000000       0x44 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_notif_check_for_update
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_notif_sched
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_start_update
+                0x00000000       0x44 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_start_update_crt
+                0x00000000       0x44 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_rollback
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_rollback_crt
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_abort
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_switch_firmware
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_switch_crt
+                0x00000000       0x36 winc/driver/source/m2m_ota.o
+ .text.m2m_ota_get_firmware_version
+                0x00000000       0x28 winc/driver/source/m2m_ota.o
  .bss.gpfOtaNotifCb
                 0x00000000        0x2 winc/driver/source/m2m_ota.o
- .text.m2m_ota_cb
-                0x00000000       0xe4 winc/driver/source/m2m_ota.o
- .text.m2m_ota_init
-                0x00000000       0x58 winc/driver/source/m2m_ota.o
- .text.m2m_ota_notif_set_url
-                0x00000000       0x68 winc/driver/source/m2m_ota.o
- .text.m2m_ota_notif_check_for_update
-                0x00000000       0x4c winc/driver/source/m2m_ota.o
- .text.m2m_ota_notif_sched
-                0x00000000       0x5c winc/driver/source/m2m_ota.o
- .text.m2m_ota_start_update
-                0x00000000       0x68 winc/driver/source/m2m_ota.o
- .text.m2m_ota_start_update_crt
-                0x00000000       0x68 winc/driver/source/m2m_ota.o
- .text.m2m_ota_rollback
-                0x00000000       0x4c winc/driver/source/m2m_ota.o
- .text.m2m_ota_rollback_crt
-                0x00000000       0x4c winc/driver/source/m2m_ota.o
- .text.m2m_ota_abort
-                0x00000000       0x4c winc/driver/source/m2m_ota.o
- .text.m2m_ota_switch_firmware
-                0x00000000       0x4c winc/driver/source/m2m_ota.o
- .text.m2m_ota_switch_crt
-                0x00000000       0x4c winc/driver/source/m2m_ota.o
- .text.m2m_ota_get_firmware_version
-                0x00000000       0x3a winc/driver/source/m2m_ota.o
- .debug_info    0x00000000      0x6a1 winc/driver/source/m2m_ota.o
- .debug_abbrev  0x00000000      0x165 winc/driver/source/m2m_ota.o
- .debug_loc     0x00000000      0x6bb winc/driver/source/m2m_ota.o
+ .bss.gpfOtaUpdateCb
+                0x00000000        0x2 winc/driver/source/m2m_ota.o
+ .debug_info    0x00000000      0xb67 winc/driver/source/m2m_ota.o
+ .debug_abbrev  0x00000000      0x1e9 winc/driver/source/m2m_ota.o
+ .debug_loc     0x00000000      0x926 winc/driver/source/m2m_ota.o
  .debug_aranges
                 0x00000000       0x80 winc/driver/source/m2m_ota.o
  .debug_ranges  0x00000000       0x70 winc/driver/source/m2m_ota.o
- .debug_line    0x00000000      0x32e winc/driver/source/m2m_ota.o
- .debug_str     0x00000000      0x6ed winc/driver/source/m2m_ota.o
+ .debug_line    0x00000000      0x2c5 winc/driver/source/m2m_ota.o
+ .debug_str     0x00000000      0x749 winc/driver/source/m2m_ota.o
  .comment       0x00000000       0x31 winc/driver/source/m2m_ota.o
- .debug_frame   0x00000000      0x2fc winc/driver/source/m2m_ota.o
+ .debug_frame   0x00000000      0x278 winc/driver/source/m2m_ota.o
  .text          0x00000000        0x0 winc/driver/source/m2m_periph.o
  .data          0x00000000        0x0 winc/driver/source/m2m_periph.o
  .bss           0x00000000        0x0 winc/driver/source/m2m_periph.o
@@ -402,185 +364,183 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 winc/driver/source/m2m_periph.o
  .debug_line    0x00000000       0x1a winc/driver/source/m2m_periph.o
- .debug_str     0x00000000      0x185 winc/driver/source/m2m_periph.o
+ .debug_str     0x00000000      0x170 winc/driver/source/m2m_periph.o
  .comment       0x00000000       0x31 winc/driver/source/m2m_periph.o
  .text          0x00000000        0x0 winc/driver/source/m2m_ssl.o
  .data          0x00000000        0x0 winc/driver/source/m2m_ssl.o
  .bss           0x00000000        0x0 winc/driver/source/m2m_ssl.o
- .bss.gpfAppSSLCb
-                0x00000000        0x2 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_cb
+                0x00000000       0xb8 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_handshake_rsp
+                0x00000000       0x36 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_send_certs_to_winc
+                0x00000000       0x32 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_retrieve_cert
+                0x00000000      0x274 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_retrieve_hash
+                0x00000000       0x48 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_stop_processing_certs
+                0x00000000       0x1a winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_ecc_process_done
+                0x00000000       0x12 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_set_active_ciphersuites
+                0x00000000       0x56 winc/driver/source/m2m_ssl.o
+ .text.m2m_ssl_init
+                0x00000000       0x24 winc/driver/source/m2m_ssl.o
  .bss.gu32HIFAddr
                 0x00000000        0x4 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_cb
-                0x00000000      0x134 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_handshake_rsp
-                0x00000000       0x6c winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_send_certs_to_winc
-                0x00000000       0x64 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_retrieve_cert
-                0x00000000      0x340 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_retrieve_hash
-                0x00000000       0x94 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_stop_processing_certs
-                0x00000000       0x28 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_ecc_process_done
-                0x00000000       0x20 winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_set_active_ciphersuites
-                0x00000000       0x6e winc/driver/source/m2m_ssl.o
- .text.m2m_ssl_init
-                0x00000000       0x48 winc/driver/source/m2m_ssl.o
- .debug_info    0x00000000      0x5ee winc/driver/source/m2m_ssl.o
- .debug_abbrev  0x00000000      0x1db winc/driver/source/m2m_ssl.o
- .debug_loc     0x00000000      0x387 winc/driver/source/m2m_ssl.o
+ .bss.gpfAppSSLCb
+                0x00000000        0x2 winc/driver/source/m2m_ssl.o
+ .debug_info    0x00000000      0x99a winc/driver/source/m2m_ssl.o
+ .debug_abbrev  0x00000000      0x261 winc/driver/source/m2m_ssl.o
+ .debug_loc     0x00000000      0x847 winc/driver/source/m2m_ssl.o
  .debug_aranges
                 0x00000000       0x60 winc/driver/source/m2m_ssl.o
  .debug_ranges  0x00000000       0x50 winc/driver/source/m2m_ssl.o
- .debug_line    0x00000000      0x352 winc/driver/source/m2m_ssl.o
- .debug_str     0x00000000      0x5c4 winc/driver/source/m2m_ssl.o
+ .debug_line    0x00000000      0x295 winc/driver/source/m2m_ssl.o
+ .debug_str     0x00000000      0x5d4 winc/driver/source/m2m_ssl.o
  .comment       0x00000000       0x31 winc/driver/source/m2m_ssl.o
- .debug_frame   0x00000000      0x1b0 winc/driver/source/m2m_ssl.o
+ .debug_frame   0x00000000      0x190 winc/driver/source/m2m_ssl.o
  .text          0x00000000        0x0 winc/driver/source/m2m_wifi.o
  .data          0x00000000        0x0 winc/driver/source/m2m_wifi.o
  .bss           0x00000000        0x0 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_download_mode
-                0x00000000       0x2a winc/driver/source/m2m_wifi.o
  .text.m2m_validate_ap_parameters
-                0x00000000      0x158 winc/driver/source/m2m_wifi.o
- .text.m2m_validate_scan_options
-                0x00000000       0x98 winc/driver/source/m2m_wifi.o
+                0x00000000       0xbc winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_download_mode
+                0x00000000       0x16 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_send_crl
-                0x00000000       0x62 winc/driver/source/m2m_wifi.o
+                0x00000000       0x3c winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_deinit
-                0x00000000       0x2a winc/driver/source/m2m_wifi.o
+                0x00000000       0x14 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_default_connect
-                0x00000000       0x42 winc/driver/source/m2m_wifi.o
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_disconnect
-                0x00000000       0x42 winc/driver/source/m2m_wifi.o
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_set_mac_address
-                0x00000000       0x6a winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_static_ip
-                0x00000000       0xbe winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_request_dhcp_client
-                0x00000000       0x10 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_request_dhcp_server
-                0x00000000       0x1a winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_enable_dhcp
-                0x00000000       0x58 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_lsn_int
-                0x00000000       0x4e winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_cust_InfoElement
-                0x00000000       0x82 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_scan_options
-                0x00000000       0x66 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_scan_region
-                0x00000000       0x64 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_request_scan
-                0x00000000       0x92 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_request_scan_passive
-                0x00000000       0x9e winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_request_scan_ssid_list
-                0x00000000      0x114 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_wps
-                0x00000000       0x78 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_wps_disable
-                0x00000000       0x4c winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_req_client_ctrl
-                0x00000000       0x1a winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_req_server_init
-                0x00000000       0x1a winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_p2p
-                0x00000000       0x74 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_p2p_disconnect
-                0x00000000       0x4c winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_enable_ap
-                0x00000000       0x66 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_gains
                 0x00000000       0x62 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_disable_ap
+ .text.m2m_wifi_set_static_ip
+                0x00000000       0x34 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_request_dhcp_client
+                0x00000000        0x4 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_request_dhcp_server
+                0x00000000        0x4 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_enable_dhcp
+                0x00000000       0x3e winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_set_lsn_int
+                0x00000000       0x34 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_set_cust_InfoElement
                 0x00000000       0x4c winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_req_curr_rssi
-                0x00000000       0x4c winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_send_ethernet_pkt
-                0x00000000       0x8a winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_get_otp_mac_address
-                0x00000000       0x4e winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_get_mac_address
-                0x00000000       0x42 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_req_scan_result
-                0x00000000       0x5c winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_get_num_ap_found
-                0x00000000       0x12 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_get_sleep_mode
-                0x00000000       0x12 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_set_sleep_mode
-                0x00000000       0x68 winc/driver/source/m2m_wifi.o
- .text.m2m_wifi_request_sleep
+ .text.m2m_wifi_set_scan_options
+                0x00000000       0x6c winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_set_scan_region
+                0x00000000       0x52 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_request_scan
+                0x00000000       0x76 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_request_scan_passive
                 0x00000000       0x7a winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_request_scan_ssid_list
+                0x00000000       0xc2 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_wps
+                0x00000000       0x6a winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_wps_disable
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_req_client_ctrl
+                0x00000000        0x4 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_req_server_init
+                0x00000000        0x4 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_p2p
+                0x00000000       0x60 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_p2p_disconnect
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_enable_ap
+                0x00000000       0x4a winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_set_gains
+                0x00000000       0x3c winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_disable_ap
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_req_curr_rssi
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_send_ethernet_pkt
+                0x00000000       0x6e winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_get_otp_mac_address
+                0x00000000       0x2e winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_get_mac_address
+                0x00000000       0x22 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_req_scan_result
+                0x00000000       0x50 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_get_num_ap_found
+                0x00000000        0x6 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_get_sleep_mode
+                0x00000000        0x6 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_set_sleep_mode
+                0x00000000       0x62 winc/driver/source/m2m_wifi.o
+ .text.m2m_wifi_request_sleep
+                0x00000000       0x66 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_set_device_name
-                0x00000000       0x80 winc/driver/source/m2m_wifi.o
+                0x00000000       0x6a winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_get_firmware_version
-                0x00000000       0x3a winc/driver/source/m2m_wifi.o
+                0x00000000       0x28 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_start_provision_mode
-                0x00000000      0x11e winc/driver/source/m2m_wifi.o
+                0x00000000       0xb6 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_stop_provision_mode
-                0x00000000       0x42 winc/driver/source/m2m_wifi.o
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_get_connection_info
-                0x00000000       0x42 winc/driver/source/m2m_wifi.o
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_set_sytem_time
                 0x00000000       0x56 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_get_sytem_time
-                0x00000000       0x42 winc/driver/source/m2m_wifi.o
+                0x00000000       0x36 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_enable_sntp
-                0x00000000       0x58 winc/driver/source/m2m_wifi.o
+                0x00000000       0x3e winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_set_power_profile
-                0x00000000       0x5c winc/driver/source/m2m_wifi.o
+                0x00000000       0x50 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_set_tx_power
-                0x00000000       0x5c winc/driver/source/m2m_wifi.o
+                0x00000000       0x50 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_enable_firmware_logs
-                0x00000000       0x5c winc/driver/source/m2m_wifi.o
+                0x00000000       0x50 winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_set_battery_voltage
-                0x00000000       0x6a winc/driver/source/m2m_wifi.o
+                0x00000000       0x5a winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_prng_get_random_bytes
-                0x00000000       0x92 winc/driver/source/m2m_wifi.o
+                0x00000000       0x76 winc/driver/source/m2m_wifi.o
  .text          0x00000000        0x0 winc/driver/source/nmasic.o
  .data          0x00000000        0x0 winc/driver/source/nmasic.o
  .bss           0x00000000        0x0 winc/driver/source/nmasic.o
  .text.chip_idle
-                0x00000000       0x76 winc/driver/source/nmasic.o
+                0x00000000       0x58 winc/driver/source/nmasic.o
  .text.cpu_start
-                0x00000000      0x158 winc/driver/source/nmasic.o
+                0x00000000      0x104 winc/driver/source/nmasic.o
  .text.nmi_get_rfrevid
-                0x00000000       0x4a winc/driver/source/nmasic.o
+                0x00000000       0x3e winc/driver/source/nmasic.o
  .text.restore_pmu_settings_after_global_reset
-                0x00000000       0x3c winc/driver/source/nmasic.o
+                0x00000000       0x2e winc/driver/source/nmasic.o
  .text.nmi_update_pll
-                0x00000000       0x86 winc/driver/source/nmasic.o
+                0x00000000       0x48 winc/driver/source/nmasic.o
  .text.nmi_set_sys_clk_src_to_xo
-                0x00000000       0x60 winc/driver/source/nmasic.o
+                0x00000000       0x24 winc/driver/source/nmasic.o
  .text.cpu_halt
-                0x00000000       0xe8 winc/driver/source/nmasic.o
- .text.chip_reset_and_cpu_halt
-                0x00000000       0x3c winc/driver/source/nmasic.o
+                0x00000000       0xb6 winc/driver/source/nmasic.o
  .text.chip_reset
-                0x00000000       0x36 winc/driver/source/nmasic.o
+                0x00000000       0x28 winc/driver/source/nmasic.o
+ .text.chip_reset_and_cpu_halt
+                0x00000000       0x16 winc/driver/source/nmasic.o
  .text.nmi_get_otp_mac_address
-                0x00000000      0x134 winc/driver/source/nmasic.o
+                0x00000000      0x114 winc/driver/source/nmasic.o
  .text.nmi_get_mac_address
-                0x00000000       0xe2 winc/driver/source/nmasic.o
+                0x00000000       0xb8 winc/driver/source/nmasic.o
  .text          0x00000000        0x0 winc/driver/source/nmbus.o
  .data          0x00000000        0x0 winc/driver/source/nmbus.o
  .bss           0x00000000        0x0 winc/driver/source/nmbus.o
  .text.nm_bus_iface_reconfigure
-                0x00000000       0x20 winc/driver/source/nmbus.o
+                0x00000000        0x4 winc/driver/source/nmbus.o
  .text          0x00000000        0x0 winc/driver/source/nmdrv.o
  .data          0x00000000        0x0 winc/driver/source/nmdrv.o
  .bss           0x00000000        0x0 winc/driver/source/nmdrv.o
  .text.nm_get_firmware_info
-                0x00000000      0x1e2 winc/driver/source/nmdrv.o
+                0x00000000      0x118 winc/driver/source/nmdrv.o
  .text.nm_get_ota_firmware_info
-                0x00000000      0x1fc winc/driver/source/nmdrv.o
+                0x00000000      0x150 winc/driver/source/nmdrv.o
  .text.nm_drv_init_download_mode
-                0x00000000       0x5a winc/driver/source/nmdrv.o
+                0x00000000       0x46 winc/driver/source/nmdrv.o
  .text          0x00000000        0x0 winc/driver/source/nmi2c.o
  .data          0x00000000        0x0 winc/driver/source/nmi2c.o
  .bss           0x00000000        0x0 winc/driver/source/nmi2c.o
@@ -589,7 +549,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 winc/driver/source/nmi2c.o
  .debug_line    0x00000000       0x1a winc/driver/source/nmi2c.o
- .debug_str     0x00000000      0x165 winc/driver/source/nmi2c.o
+ .debug_str     0x00000000      0x150 winc/driver/source/nmi2c.o
  .comment       0x00000000       0x31 winc/driver/source/nmi2c.o
  .text          0x00000000        0x0 winc/driver/source/nmspi.o
  .data          0x00000000        0x0 winc/driver/source/nmspi.o
@@ -602,101 +562,50 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 winc/driver/source/nmuart.o
  .debug_line    0x00000000       0x1a winc/driver/source/nmuart.o
- .debug_str     0x00000000      0x166 winc/driver/source/nmuart.o
+ .debug_str     0x00000000      0x151 winc/driver/source/nmuart.o
  .comment       0x00000000       0x31 winc/driver/source/nmuart.o
  .text          0x00000000        0x0 winc/socket/source/socket.o
  .data          0x00000000        0x0 winc/socket/source/socket.o
  .bss           0x00000000        0x0 winc/socket/source/socket.o
  .text.socketDeinit
-                0x00000000       0x40 winc/socket/source/socket.o
- .text.connect  0x00000000      0x12e winc/socket/source/socket.o
- .text.sendto   0x00000000      0x178 winc/socket/source/socket.o
- .text.recvfrom
-                0x00000000      0x1d0 winc/socket/source/socket.o
- .text.nmi_inet_addr
-                0x00000000       0xe4 winc/socket/source/socket.o
- .text.gethostbyname
-                0x00000000       0x70 winc/socket/source/socket.o
- .text.sslSetSockOpt
-                0x00000000      0x3f6 winc/socket/source/socket.o
- .text.setsockopt
-                0x00000000      0x104 winc/socket/source/socket.o
- .text.getsockopt
                 0x00000000       0x32 winc/socket/source/socket.o
+ .text.connect  0x00000000      0x100 winc/socket/source/socket.o
+ .text.sendto   0x00000000      0x132 winc/socket/source/socket.o
+ .text.recvfrom
+                0x00000000      0x13a winc/socket/source/socket.o
+ .text.nmi_inet_addr
+                0x00000000       0xa2 winc/socket/source/socket.o
+ .text.gethostbyname
+                0x00000000       0x4e winc/socket/source/socket.o
+ .text.setsockopt
+                0x00000000      0x234 winc/socket/source/socket.o
+ .text.getsockopt
+                0x00000000        0x4 winc/socket/source/socket.o
  .text.m2m_ping_req
-                0x00000000       0xae winc/socket/source/socket.o
+                0x00000000       0x8c winc/socket/source/socket.o
  .text.sslEnableCertExpirationCheck
-                0x00000000       0x64 winc/socket/source/socket.o
+                0x00000000       0x5c winc/socket/source/socket.o
  .text          0x00000000        0x0 winc/spi_flash/source/spi_flash.o
  .data          0x00000000        0x0 winc/spi_flash/source/spi_flash.o
  .bss           0x00000000        0x0 winc/spi_flash/source/spi_flash.o
- .text.spi_flash_read_status_reg
-                0x00000000      0x124 winc/spi_flash/source/spi_flash.o
  .text.spi_flash_load_to_cortus_mem
-                0x00000000      0x1ae winc/spi_flash/source/spi_flash.o
- .text.spi_flash_sector_erase
-                0x00000000      0x15c winc/spi_flash/source/spi_flash.o
+                0x00000000       0xf8 winc/spi_flash/source/spi_flash.o
  .text.spi_flash_write_enable
-                0x00000000       0xec winc/spi_flash/source/spi_flash.o
- .text.spi_flash_write_disable
-                0x00000000       0xec winc/spi_flash/source/spi_flash.o
- .text.spi_flash_page_program
-                0x00000000      0x194 winc/spi_flash/source/spi_flash.o
- .text.spi_flash_read_internal
-                0x00000000       0x90 winc/spi_flash/source/spi_flash.o
+                0x00000000       0xb6 winc/spi_flash/source/spi_flash.o
+ .text.spi_flash_read_status_reg
+                0x00000000       0xd0 winc/spi_flash/source/spi_flash.o
  .text.spi_flash_pp
-                0x00000000       0xda winc/spi_flash/source/spi_flash.o
- .text.spi_flash_rdid
-                0x00000000      0x156 winc/spi_flash/source/spi_flash.o
+                0x00000000      0x1d6 winc/spi_flash/source/spi_flash.o
  .text.spi_flash_read
-                0x00000000       0xe2 winc/spi_flash/source/spi_flash.o
+                0x00000000       0xd0 winc/spi_flash/source/spi_flash.o
  .text.spi_flash_write
-                0x00000000      0x234 winc/spi_flash/source/spi_flash.o
+                0x00000000      0x11c winc/spi_flash/source/spi_flash.o
  .text.spi_flash_erase
-                0x00000000       0xfe winc/spi_flash/source/spi_flash.o
+                0x00000000      0x160 winc/spi_flash/source/spi_flash.o
  .text.spi_flash_get_size
-                0x00000000       0xc4 winc/spi_flash/source/spi_flash.o
+                0x00000000      0x15e winc/spi_flash/source/spi_flash.o
  .bss.gu32InernalFlashSize.1879
                 0x00000000        0x4 winc/spi_flash/source/spi_flash.o
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(cmpsf2.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(cmpsf2.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(cmpsf2.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_cmp.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_cmp.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_cmp.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_split3.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_split3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_split3.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_zero.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_zero.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_zero.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(gesf2.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(gesf2.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(gesf2.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_inf.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_inf.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_inf.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_nan.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_nan.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_nan.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscA.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscA.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscA.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscB.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscB.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscB.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_round.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_round.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_round.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
@@ -711,22 +620,6 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc.mul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc.div
-                0x00000000       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc.prologue
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc.builtins
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc.fmul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
- .text.libgcc.fixed
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodsi4.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
@@ -804,9 +697,6 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodhi4.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodhi4.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(memset.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(memset.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(memset.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strcmp.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strcmp.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strcmp.o)
@@ -1036,7 +926,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x7888
+.text           0x00000000     0x452e
  *(.vectors)
  .vectors       0x00000000       0xa0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o
                 0x00000000                __vector_default
@@ -1142,551 +1032,345 @@ END GROUP
                 0x0000020a                . = ALIGN (0x2)
  *(.text.*)
  .text.atmel_start_init
-                0x0000020a       0x14 atmel_start.o
+                0x0000020a        0x6 atmel_start.o
                 0x0000020a                atmel_start_init
  .text.motor_dir_port_init
-                0x0000021e       0xa0 motoare.o
-                0x0000021e                motor_dir_port_init
- .text.LEFT_WHEEL_TCB3_PWM_init
-                0x000002be       0x7e motoare.o
-                0x000002be                LEFT_WHEEL_TCB3_PWM_init
- .text.RIGHT_WHEEL_TCB1_PWM_init
-                0x0000033c       0x90 motoare.o
-                0x0000033c                RIGHT_WHEEL_TCB1_PWM_init
+                0x00000210       0x3a motoare.o
+                0x00000210                motor_dir_port_init
  .text.motor_start_left_wheel
-                0x000003cc       0x52 motoare.o
-                0x000003cc                motor_start_left_wheel
+                0x0000024a       0x2e motoare.o
+                0x0000024a                motor_start_left_wheel
+ .text.motor_stop_left_wheel
+                0x00000278       0x1c motoare.o
+                0x00000278                motor_stop_left_wheel
  .text.motor_start_right_wheel
-                0x0000041e       0x52 motoare.o
-                0x0000041e                motor_start_right_wheel
+                0x00000294       0x2e motoare.o
+                0x00000294                motor_start_right_wheel
+ .text.motor_stop_right_wheel
+                0x000002c2       0x1c motoare.o
+                0x000002c2                motor_stop_right_wheel
  .text.motor_reverse_left_wheel
-                0x00000470       0x38 motoare.o
-                0x00000470                motor_reverse_left_wheel
+                0x000002de       0x16 motoare.o
+                0x000002de                motor_reverse_left_wheel
+ .text.motor_reverse_right_wheel
+                0x000002f4       0x16 motoare.o
+                0x000002f4                motor_reverse_right_wheel
  .text.wifi_init
-                0x000004a8       0x54 winc_init.o
-                0x000004a8                wifi_init
+                0x0000030a       0x48 winc_init.o
+                0x0000030a                wifi_init
  .text.usart_putchar_printf
-                0x000004fc       0x2a main.o
-                0x000004fc                usart_putchar_printf
+                0x00000352        0x8 main.o
+                0x00000352                usart_putchar_printf
+ .text.wifi_cb  0x0000035a       0x70 main.o
  .text.get_command
-                0x00000526       0x74 main.o
-                0x00000526                get_command
+                0x000003ca       0x40 main.o
+                0x000003ca                get_command
  .text.socket_cb
-                0x0000059a      0x242 main.o
- .text.wifi_cb  0x000007dc       0xf0 main.o
- .text.main     0x000008cc      0x16a main.o
-                0x000008cc                main
+                0x0000040a      0x22c main.o
+ .text.main     0x00000636      0x128 main.o
+                0x00000636                main
  .text.BOD_init
-                0x00000a36       0x10 src/bod.o
-                0x00000a36                BOD_init
- .text.ccp_write_io
-                0x00000a46       0x2c src/clkctrl.o
+                0x0000075e        0x4 src/bod.o
+                0x0000075e                BOD_init
  .text.CLKCTRL_init
-                0x00000a72       0x1a src/clkctrl.o
-                0x00000a72                CLKCTRL_init
+                0x00000762       0x10 src/clkctrl.o
+                0x00000762                CLKCTRL_init
  .text.CPUINT_init
-                0x00000a8c       0x10 src/cpuint.o
-                0x00000a8c                CPUINT_init
- .text.PORTA_set_pin_pull_mode
-                0x00000a9c       0x62 src/driver_init.o
- .text.PORTA_set_pin_dir
-                0x00000afe       0xa8 src/driver_init.o
- .text.PORTA_set_pin_level
-                0x00000ba6       0x74 src/driver_init.o
- .text.PORTB_set_pin_pull_mode
-                0x00000c1a       0x62 src/driver_init.o
- .text.PORTB_set_pin_dir
-                0x00000c7c       0xa8 src/driver_init.o
- .text.PORTB_set_pin_level
-                0x00000d24       0x74 src/driver_init.o
- .text.PORTC_set_pin_pull_mode
-                0x00000d98       0x62 src/driver_init.o
- .text.PORTC_pin_set_inverted
-                0x00000dfa       0x5c src/driver_init.o
- .text.PORTC_pin_set_isc
-                0x00000e56       0x46 src/driver_init.o
- .text.PORTC_set_pin_dir
-                0x00000e9c       0xa8 src/driver_init.o
- .text.PORTC_set_pin_level
-                0x00000f44       0x74 src/driver_init.o
- .text.CONF_WIFI_M2M_RESET_PIN_set_dir
-                0x00000fb8       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_RESET_PIN_set_level
-                0x00000fd6       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_WAKE_PIN_set_dir
-                0x00000ff4       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_WAKE_PIN_set_level
-                0x00001012       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_MOSI_PIN_set_dir
-                0x00001030       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_MOSI_PIN_set_level
-                0x0000104e       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_MISO_PIN_set_pull_mode
-                0x0000106c       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_MISO_PIN_set_dir
-                0x0000108a       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_SCK_PIN_set_dir
-                0x000010a8       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_SCK_PIN_set_level
-                0x000010c6       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_CS_PIN_set_dir
-                0x000010e4       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_SPI_CS_PIN_set_level
-                0x00001102       0x1e src/driver_init.o
- .text.SW0_set_pull_mode
-                0x00001120       0x1e src/driver_init.o
- .text.SW0_set_dir
-                0x0000113e       0x1e src/driver_init.o
- .text.LED0_set_dir
-                0x0000115c       0x1e src/driver_init.o
- .text.LED0_set_level
-                0x0000117a       0x1e src/driver_init.o
- .text.PC0_set_dir
-                0x00001198       0x1e src/driver_init.o
- .text.PC0_set_level
-                0x000011b6       0x1e src/driver_init.o
- .text.PC1_set_pull_mode
-                0x000011d4       0x1e src/driver_init.o
- .text.PC1_set_dir
-                0x000011f2       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_INT_PIN_set_pull_mode
-                0x00001210       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_INT_PIN_set_dir
-                0x0000122e       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_INT_PIN_set_isc
-                0x0000124c       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_INT_PIN_set_inverted
-                0x0000126a       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_INT_PIN_set_level
-                0x00001288       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_CHIP_ENABLE_PIN_set_dir
-                0x000012a6       0x1e src/driver_init.o
- .text.CONF_WIFI_M2M_CHIP_ENABLE_PIN_set_level
-                0x000012c4       0x1e src/driver_init.o
+                0x00000772        0x4 src/cpuint.o
+                0x00000772                CPUINT_init
  .text.mcu_init
-                0x000012e2      0x130 src/driver_init.o
-                0x000012e2                mcu_init
+                0x00000776       0x6e src/driver_init.o
+                0x00000776                mcu_init
  .text.USART_0_initialization
-                0x00001412       0x2c src/driver_init.o
-                0x00001412                USART_0_initialization
+                0x000007e4       0x16 src/driver_init.o
+                0x000007e4                USART_0_initialization
  .text.SPI_0_initialization
-                0x0000143e       0x38 src/driver_init.o
-                0x0000143e                SPI_0_initialization
+                0x000007fa       0x1a src/driver_init.o
+                0x000007fa                SPI_0_initialization
  .text.system_init
-                0x00001476       0x9e src/driver_init.o
-                0x00001476                system_init
+                0x00000814       0x66 src/driver_init.o
+                0x00000814                system_init
  .text.protected_write_io
-                0x00001514        0xa src/protected_io.o
-                0x00001514                protected_write_io
+                0x0000087a        0xa src/protected_io.o
+                0x0000087a                protected_write_io
  .text.SLPCTRL_init
-                0x0000151e       0x10 src/slpctrl.o
-                0x0000151e                SLPCTRL_init
+                0x00000884        0x4 src/slpctrl.o
+                0x00000884                SLPCTRL_init
  .text.SPI_0_init
-                0x0000152e       0x1e src/spi_basic.o
-                0x0000152e                SPI_0_init
+                0x00000888        0xc src/spi_basic.o
+                0x00000888                SPI_0_init
  .text.SPI_0_enable
-                0x0000154c       0x22 src/spi_basic.o
-                0x0000154c                SPI_0_enable
+                0x00000894        0xc src/spi_basic.o
+                0x00000894                SPI_0_enable
  .text.SPI_0_exchange_byte
-                0x0000156e       0x3e src/spi_basic.o
-                0x0000156e                SPI_0_exchange_byte
+                0x000008a0       0x1c src/spi_basic.o
+                0x000008a0                SPI_0_exchange_byte
  .text.scheduler_dummy_handler
-                0x000015ac       0x22 src/timeout.o
-                0x000015ac                scheduler_dummy_handler
+                0x000008bc        0x8 src/timeout.o
+                0x000008bc                scheduler_dummy_handler
  .text.scheduler_timeout_init
-                0x000015ce       0x3c src/timeout.o
-                0x000015ce                scheduler_timeout_init
+                0x000008c4       0x18 src/timeout.o
+                0x000008c4                scheduler_timeout_init
  .text.scheduler_stop_timeouts
-                0x0000160a       0x36 src/timeout.o
-                0x0000160a                scheduler_stop_timeouts
- .text.scheduler_set_timer_duration
-                0x00001640       0x92 src/timeout.o
-                0x00001640                scheduler_set_timer_duration
+                0x000008dc       0x20 src/timeout.o
+                0x000008dc                scheduler_stop_timeouts
  .text.scheduler_start_timer_at_head
-                0x000016d2      0x10c src/timeout.o
-                0x000016d2                scheduler_start_timer_at_head
- .text.scheduler_enqueue_callback
-                0x000017de       0x78 src/timeout.o
-                0x000017de                scheduler_enqueue_callback
+                0x000008fc       0xe6 src/timeout.o
+                0x000008fc                scheduler_start_timer_at_head
  .text.__vector_3
-                0x00001856       0xd4 src/timeout.o
-                0x00001856                __vector_3
+                0x000009e2       0xc6 src/timeout.o
+                0x000009e2                __vector_3
  .text.USART_0_init
-                0x0000192a       0x28 src/usart_basic.o
-                0x0000192a                USART_0_init
+                0x00000aa8       0x14 src/usart_basic.o
+                0x00000aa8                USART_0_init
  .text.USART_1_write
-                0x00001952       0x36 src/usart_basic.o
-                0x00001952                USART_1_write
- .text.PORTA_set_pin_dir
-                0x00001988       0xa8 winc/bsp/source/nm_bsp_mega.o
- .text.PORTA_set_pin_level
-                0x00001a30       0x74 winc/bsp/source/nm_bsp_mega.o
- .text.PORTC_set_pin_pull_mode
-                0x00001aa4       0x62 winc/bsp/source/nm_bsp_mega.o
- .text.PORTC_pin_set_isc
-                0x00001b06       0x46 winc/bsp/source/nm_bsp_mega.o
- .text.PORTC_set_pin_dir
-                0x00001b4c       0xa8 winc/bsp/source/nm_bsp_mega.o
- .text.PORTC_set_pin_level
-                0x00001bf4       0x74 winc/bsp/source/nm_bsp_mega.o
- .text.PORTC_get_pin_level
-                0x00001c68       0x42 winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_RESET_PIN_set_dir
-                0x00001caa       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_RESET_PIN_set_level
-                0x00001cc8       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_WAKE_PIN_set_dir
-                0x00001ce6       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_INT_PIN_set_pull_mode
-                0x00001d04       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_INT_PIN_set_dir
-                0x00001d22       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_INT_PIN_set_isc
-                0x00001d40       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_INT_PIN_get_level
-                0x00001d5e       0x14 winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_CHIP_ENABLE_PIN_set_dir
-                0x00001d72       0x1e winc/bsp/source/nm_bsp_mega.o
- .text.CONF_WIFI_M2M_CHIP_ENABLE_PIN_set_level
-                0x00001d90       0x1e winc/bsp/source/nm_bsp_mega.o
+                0x00000abc       0x10 src/usart_basic.o
+                0x00000abc                USART_1_write
  .text.__vector_24
-                0x00001dae       0x86 winc/bsp/source/nm_bsp_mega.o
-                0x00001dae                __vector_24
- .text.init_chip_pins
-                0x00001e34       0x22 winc/bsp/source/nm_bsp_mega.o
- .text.nm_bsp_init
-                0x00001e56       0x22 winc/bsp/source/nm_bsp_mega.o
-                0x00001e56                nm_bsp_init
- .text.nm_bsp_reset
-                0x00001e78       0x40 winc/bsp/source/nm_bsp_mega.o
-                0x00001e78                nm_bsp_reset
+                0x00000acc       0x5a winc/bsp/source/nm_bsp_mega.o
+                0x00000acc                __vector_24
  .text.nm_bsp_sleep
-                0x00001eb8      0x130 winc/bsp/source/nm_bsp_mega.o
-                0x00001eb8                nm_bsp_sleep
+                0x00000b26       0x24 winc/bsp/source/nm_bsp_mega.o
+                0x00000b26                nm_bsp_sleep
+ .text.nm_bsp_reset
+                0x00000b4a       0x22 winc/bsp/source/nm_bsp_mega.o
+                0x00000b4a                nm_bsp_reset
+ .text.nm_bsp_init
+                0x00000b6c       0x18 winc/bsp/source/nm_bsp_mega.o
+                0x00000b6c                nm_bsp_init
  .text.nm_bsp_register_isr
-                0x00001fe8       0x40 winc/bsp/source/nm_bsp_mega.o
-                0x00001fe8                nm_bsp_register_isr
+                0x00000b84       0x28 winc/bsp/source/nm_bsp_mega.o
+                0x00000b84                nm_bsp_register_isr
  .text.nm_bsp_interrupt_ctrl
-                0x00002028       0x2a winc/bsp/source/nm_bsp_mega.o
-                0x00002028                nm_bsp_interrupt_ctrl
- .text.PORTA_set_pin_dir
-                0x00002052       0xa8 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.PORTA_set_pin_level
-                0x000020fa       0x74 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_MOSI_PIN_set_dir
-                0x0000216e       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_MOSI_PIN_set_level
-                0x0000218c       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_MISO_PIN_set_dir
-                0x000021aa       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_SCK_PIN_set_dir
-                0x000021c8       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_SCK_PIN_set_level
-                0x000021e6       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_CS_PIN_set_dir
-                0x00002204       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.CONF_WIFI_M2M_SPI_CS_PIN_set_level
-                0x00002222       0x1e winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .text.spi_rw   0x00002240       0xcc winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                0x00000bac       0x1e winc/bsp/source/nm_bsp_mega.o
+                0x00000bac                nm_bsp_interrupt_ctrl
  .text.nm_bus_init
-                0x0000230c       0x62 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
-                0x0000230c                nm_bus_init
+                0x00000bca       0x2a winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                0x00000bca                nm_bus_init
  .text.nm_bus_ioctl
-                0x0000236e       0x64 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
-                0x0000236e                nm_bus_ioctl
+                0x00000bf4       0xaa winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                0x00000bf4                nm_bus_ioctl
  .text.nm_bus_deinit
-                0x000023d2       0x10 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
-                0x000023d2                nm_bus_deinit
+                0x00000c9e        0x4 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                0x00000c9e                nm_bus_deinit
  .text.m2m_memcpy
-                0x000023e2       0x88 winc/common/source/nm_common.o
-                0x000023e2                m2m_memcpy
+                0x00000ca2       0x20 winc/common/source/nm_common.o
+                0x00000ca2                m2m_memcpy
  .text.m2m_memset
-                0x0000246a       0x76 winc/common/source/nm_common.o
-                0x0000246a                m2m_memset
+                0x00000cc2       0x1a winc/common/source/nm_common.o
+                0x00000cc2                m2m_memset
  .text.m2m_strlen
-                0x000024e0       0x46 winc/common/source/nm_common.o
-                0x000024e0                m2m_strlen
- .text.isr      0x00002526       0x1a winc/driver/source/m2m_hif.o
- .text.hif_set_rx_done
-                0x00002540       0x72 winc/driver/source/m2m_hif.o
+                0x00000cdc       0x1e winc/common/source/nm_common.o
+                0x00000cdc                m2m_strlen
+ .text.isr      0x00000cfa        0xc winc/driver/source/m2m_hif.o
  .text.m2m_hif_cb
-                0x000025b2       0x2a winc/driver/source/m2m_hif.o
+                0x00000d06        0x2 winc/driver/source/m2m_hif.o
+ .text.hif_set_rx_done
+                0x00000d08       0x5a winc/driver/source/m2m_hif.o
  .text.hif_chip_wake
-                0x000025dc       0x4c winc/driver/source/m2m_hif.o
-                0x000025dc                hif_chip_wake
+                0x00000d62       0x32 winc/driver/source/m2m_hif.o
+                0x00000d62                hif_chip_wake
  .text.hif_chip_sleep_sc
-                0x00002628       0x22 winc/driver/source/m2m_hif.o
-                0x00002628                hif_chip_sleep_sc
+                0x00000d94       0x16 winc/driver/source/m2m_hif.o
+                0x00000d94                hif_chip_sleep_sc
  .text.hif_chip_sleep
-                0x0000264a       0x3e winc/driver/source/m2m_hif.o
-                0x0000264a                hif_chip_sleep
+                0x00000daa       0x30 winc/driver/source/m2m_hif.o
+                0x00000daa                hif_chip_sleep
  .text.hif_init
-                0x00002688       0x3e winc/driver/source/m2m_hif.o
-                0x00002688                hif_init
+                0x00000dda       0x2a winc/driver/source/m2m_hif.o
+                0x00000dda                hif_init
  .text.hif_send
-                0x000026c6      0x3f0 winc/driver/source/m2m_hif.o
-                0x000026c6                hif_send
- .text.hif_isr  0x00002ab6      0x328 winc/driver/source/m2m_hif.o
+                0x00000e04      0x336 winc/driver/source/m2m_hif.o
+                0x00000e04                hif_send
  .text.hif_handle_isr
-                0x00002dde       0x36 winc/driver/source/m2m_hif.o
-                0x00002dde                hif_handle_isr
+                0x0000113a      0x310 winc/driver/source/m2m_hif.o
+                0x0000113a                hif_handle_isr
  .text.hif_receive
-                0x00002e14      0x19a winc/driver/source/m2m_hif.o
-                0x00002e14                hif_receive
+                0x0000144a      0x116 winc/driver/source/m2m_hif.o
+                0x0000144a                hif_receive
  .text.hif_register_cb
-                0x00002fae       0xb4 winc/driver/source/m2m_hif.o
-                0x00002fae                hif_register_cb
+                0x00001560       0x6c winc/driver/source/m2m_hif.o
+                0x00001560                hif_register_cb
  .text.m2m_wifi_cb
-                0x00003062      0x544 winc/driver/source/m2m_wifi.o
+                0x000015cc      0x32c winc/driver/source/m2m_wifi.o
  .text.m2m_wifi_init
-                0x000035a6       0x8e winc/driver/source/m2m_wifi.o
-                0x000035a6                m2m_wifi_init
+                0x000018f8       0x78 winc/driver/source/m2m_wifi.o
+                0x000018f8                m2m_wifi_init
  .text.m2m_wifi_handle_events
-                0x00003634       0x1c winc/driver/source/m2m_wifi.o
-                0x00003634                m2m_wifi_handle_events
- .text.m2m_wifi_connect
-                0x00003650       0x4e winc/driver/source/m2m_wifi.o
-                0x00003650                m2m_wifi_connect
+                0x00001970        0x6 winc/driver/source/m2m_wifi.o
+                0x00001970                m2m_wifi_handle_events
  .text.m2m_wifi_connect_sc
-                0x0000369e      0x41a winc/driver/source/m2m_wifi.o
-                0x0000369e                m2m_wifi_connect_sc
+                0x00001976      0x200 winc/driver/source/m2m_wifi.o
+                0x00001976                m2m_wifi_connect_sc
+ .text.m2m_wifi_connect
+                0x00001b76       0x14 winc/driver/source/m2m_wifi.o
+                0x00001b76                m2m_wifi_connect
  .text.chip_apply_conf
-                0x00003ab8       0xb4 winc/driver/source/nmasic.o
-                0x00003ab8                chip_apply_conf
+                0x00001b8a       0x72 winc/driver/source/nmasic.o
+                0x00001b8a                chip_apply_conf
  .text.enable_interrupts
-                0x00003b6c       0xc4 winc/driver/source/nmasic.o
-                0x00003b6c                enable_interrupts
+                0x00001bfc       0x94 winc/driver/source/nmasic.o
+                0x00001bfc                enable_interrupts
  .text.nmi_get_chipid
-                0x00003c30      0x1e0 winc/driver/source/nmasic.o
-                0x00003c30                nmi_get_chipid
+                0x00001c90      0x1a0 winc/driver/source/nmasic.o
+                0x00001c90                nmi_get_chipid
  .text.chip_sleep
-                0x00003e10      0x12a winc/driver/source/nmasic.o
-                0x00003e10                chip_sleep
+                0x00001e30       0xb0 winc/driver/source/nmasic.o
+                0x00001e30                chip_sleep
  .text.chip_wake
-                0x00003f3a      0x16a winc/driver/source/nmasic.o
-                0x00003f3a                chip_wake
+                0x00001ee0       0xf6 winc/driver/source/nmasic.o
+                0x00001ee0                chip_wake
  .text.wait_for_bootrom
-                0x000040a4      0x20a winc/driver/source/nmasic.o
-                0x000040a4                wait_for_bootrom
+                0x00001fd6      0x146 winc/driver/source/nmasic.o
+                0x00001fd6                wait_for_bootrom
  .text.wait_for_firmware_start
-                0x000042ae      0x12a winc/driver/source/nmasic.o
-                0x000042ae                wait_for_firmware_start
+                0x0000211c       0xee winc/driver/source/nmasic.o
+                0x0000211c                wait_for_firmware_start
  .text.chip_deinit
-                0x000043d8       0x6e winc/driver/source/nmasic.o
-                0x000043d8                chip_deinit
+                0x0000220a       0x58 winc/driver/source/nmasic.o
+                0x0000220a                chip_deinit
  .text.nm_bus_iface_init
-                0x00004446       0x2a winc/driver/source/nmbus.o
-                0x00004446                nm_bus_iface_init
+                0x00002262        0x6 winc/driver/source/nmbus.o
+                0x00002262                nm_bus_iface_init
  .text.nm_bus_iface_deinit
-                0x00004470       0x1c winc/driver/source/nmbus.o
-                0x00004470                nm_bus_iface_deinit
+                0x00002268        0x6 winc/driver/source/nmbus.o
+                0x00002268                nm_bus_iface_deinit
  .text.nm_bus_reset
-                0x0000448c       0x18 winc/driver/source/nmbus.o
-                0x0000448c                nm_bus_reset
+                0x0000226e        0x6 winc/driver/source/nmbus.o
+                0x0000226e                nm_bus_reset
  .text.nm_read_reg
-                0x000044a4       0x38 winc/driver/source/nmbus.o
-                0x000044a4                nm_read_reg
+                0x00002274        0x6 winc/driver/source/nmbus.o
+                0x00002274                nm_read_reg
  .text.nm_read_reg_with_ret
-                0x000044dc       0x3c winc/driver/source/nmbus.o
-                0x000044dc                nm_read_reg_with_ret
+                0x0000227a        0x6 winc/driver/source/nmbus.o
+                0x0000227a                nm_read_reg_with_ret
  .text.nm_write_reg
-                0x00004518       0x42 winc/driver/source/nmbus.o
-                0x00004518                nm_write_reg
- .text.p_nm_read_block
-                0x0000455a       0x42 winc/driver/source/nmbus.o
+                0x00002280        0x6 winc/driver/source/nmbus.o
+                0x00002280                nm_write_reg
  .text.nm_read_block
-                0x0000459c      0x144 winc/driver/source/nmbus.o
-                0x0000459c                nm_read_block
- .text.p_nm_write_block
-                0x000046e0       0x42 winc/driver/source/nmbus.o
+                0x00002286       0xf6 winc/driver/source/nmbus.o
+                0x00002286                nm_read_block
  .text.nm_write_block
-                0x00004722      0x144 winc/driver/source/nmbus.o
-                0x00004722                nm_write_block
+                0x0000237c       0xf6 winc/driver/source/nmbus.o
+                0x0000237c                nm_write_block
  .text.nm_get_firmware_full_info
-                0x00004866      0x1f8 winc/driver/source/nmdrv.o
-                0x00004866                nm_get_firmware_full_info
+                0x00002472      0x150 winc/driver/source/nmdrv.o
+                0x00002472                nm_get_firmware_full_info
  .text.nm_drv_init
-                0x00004a5e       0xa6 winc/driver/source/nmdrv.o
-                0x00004a5e                nm_drv_init
+                0x000025c2       0x5e winc/driver/source/nmdrv.o
+                0x000025c2                nm_drv_init
  .text.nm_drv_deinit
-                0x00004b04       0x54 winc/driver/source/nmdrv.o
-                0x00004b04                nm_drv_deinit
- .text.nmi_spi_read
-                0x00004b58       0x42 winc/driver/source/nmspi.o
+                0x00002620       0x2c winc/driver/source/nmdrv.o
+                0x00002620                nm_drv_deinit
  .text.nmi_spi_write
-                0x00004b9a       0x42 winc/driver/source/nmspi.o
- .text.crc7_byte
-                0x00004bdc       0x48 winc/driver/source/nmspi.o
- .text.crc7     0x00004c24       0x6c winc/driver/source/nmspi.o
- .text.spi_cmd  0x00004c90      0x2d0 winc/driver/source/nmspi.o
- .text.spi_data_rsp
-                0x00004f60       0x84 winc/driver/source/nmspi.o
+                0x0000264c       0x32 winc/driver/source/nmspi.o
+ .text.spi_cmd  0x0000267e      0x158 winc/driver/source/nmspi.o
+ .text.nmi_spi_read
+                0x000027d6       0x32 winc/driver/source/nmspi.o
  .text.spi_cmd_rsp
-                0x00004fe4       0x9c winc/driver/source/nmspi.o
+                0x00002808       0x86 winc/driver/source/nmspi.o
  .text.spi_data_read
-                0x00005080      0x116 winc/driver/source/nmspi.o
- .text.spi_data_write
-                0x00005196      0x106 winc/driver/source/nmspi.o
+                0x0000288e       0xf2 winc/driver/source/nmspi.o
  .text.spi_write_reg
-                0x0000529c      0x100 winc/driver/source/nmspi.o
- .text.nm_spi_write
-                0x0000539c      0x114 winc/driver/source/nmspi.o
+                0x00002980       0xfa winc/driver/source/nmspi.o
  .text.spi_read_reg
-                0x000054b0      0x186 winc/driver/source/nmspi.o
- .text.nm_spi_read
-                0x00005636      0x12e winc/driver/source/nmspi.o
- .text.spi_init_pkt_sz
-                0x00005764       0x70 winc/driver/source/nmspi.o
+                0x00002a7a      0x142 winc/driver/source/nmspi.o
  .text.nm_spi_reset
-                0x000057d4       0x4c winc/driver/source/nmspi.o
-                0x000057d4                nm_spi_reset
- .text.nm_spi_init
-                0x00005820       0xe0 winc/driver/source/nmspi.o
-                0x00005820                nm_spi_init
+                0x00002bbc       0x40 winc/driver/source/nmspi.o
+                0x00002bbc                nm_spi_reset
  .text.nm_spi_deinit
-                0x00005900       0x14 winc/driver/source/nmspi.o
-                0x00005900                nm_spi_deinit
+                0x00002bfc        0x8 winc/driver/source/nmspi.o
+                0x00002bfc                nm_spi_deinit
  .text.nm_spi_read_reg
-                0x00005914       0x46 winc/driver/source/nmspi.o
-                0x00005914                nm_spi_read_reg
+                0x00002c04       0x2a winc/driver/source/nmspi.o
+                0x00002c04                nm_spi_read_reg
  .text.nm_spi_read_reg_with_ret
-                0x0000595a       0x4e winc/driver/source/nmspi.o
-                0x0000595a                nm_spi_read_reg_with_ret
+                0x00002c2e       0x10 winc/driver/source/nmspi.o
+                0x00002c2e                nm_spi_read_reg_with_ret
  .text.nm_spi_write_reg
-                0x000059a8       0x54 winc/driver/source/nmspi.o
-                0x000059a8                nm_spi_write_reg
+                0x00002c3e       0x10 winc/driver/source/nmspi.o
+                0x00002c3e                nm_spi_write_reg
+ .text.nm_spi_init
+                0x00002c4e       0xce winc/driver/source/nmspi.o
+                0x00002c4e                nm_spi_init
  .text.nm_spi_read_block
-                0x000059fc       0x54 winc/driver/source/nmspi.o
-                0x000059fc                nm_spi_read_block
+                0x00002d1c      0x112 winc/driver/source/nmspi.o
+                0x00002d1c                nm_spi_read_block
  .text.nm_spi_write_block
-                0x00005a50       0x54 winc/driver/source/nmspi.o
-                0x00005a50                nm_spi_write_block
+                0x00002e2e      0x1d8 winc/driver/source/nmspi.o
+                0x00002e2e                nm_spi_write_block
  .text.Socket_ReadSocketData
-                0x00005aa4      0x26a winc/socket/source/socket.o
-                0x00005aa4                Socket_ReadSocketData
+                0x00003006      0x198 winc/socket/source/socket.o
+                0x00003006                Socket_ReadSocketData
  .text.m2m_ip_cb
-                0x00005d0e      0x788 winc/socket/source/socket.o
+                0x0000319e      0x47c winc/socket/source/socket.o
  .text.socketInit
-                0x00006496       0x42 winc/socket/source/socket.o
-                0x00006496                socketInit
+                0x0000361a       0x34 winc/socket/source/socket.o
+                0x0000361a                socketInit
  .text.registerSocketCallback
-                0x000064d8       0x3a winc/socket/source/socket.o
-                0x000064d8                registerSocketCallback
- .text.socket   0x00006512      0x1c4 winc/socket/source/socket.o
-                0x00006512                socket
- .text.bind     0x000066d6      0x110 winc/socket/source/socket.o
-                0x000066d6                bind
- .text.listen   0x000067e6       0xb6 winc/socket/source/socket.o
-                0x000067e6                listen
- .text.accept   0x0000689c       0x52 winc/socket/source/socket.o
-                0x0000689c                accept
- .text.send     0x000068ee      0x166 winc/socket/source/socket.o
-                0x000068ee                send
- .text.recv     0x00006a54      0x1d4 winc/socket/source/socket.o
-                0x00006a54                recv
- .text.close    0x00006c28      0x144 winc/socket/source/socket.o
-                0x00006c28                close
- .text.spi_flash_enter_low_power_mode
-                0x00006d6c       0xb4 winc/spi_flash/source/spi_flash.o
- .text.spi_flash_leave_low_power_mode
-                0x00006e20       0xb4 winc/spi_flash/source/spi_flash.o
+                0x0000364e       0x12 winc/socket/source/socket.o
+                0x0000364e                registerSocketCallback
+ .text.socket   0x00003660      0x204 winc/socket/source/socket.o
+                0x00003660                socket
+ .text.bind     0x00003864       0xec winc/socket/source/socket.o
+                0x00003864                bind
+ .text.listen   0x00003950       0x96 winc/socket/source/socket.o
+                0x00003950                listen
+ .text.accept   0x000039e6       0x22 winc/socket/source/socket.o
+                0x000039e6                accept
+ .text.send     0x00003a08      0x10e winc/socket/source/socket.o
+                0x00003a08                send
+ .text.recv     0x00003b16      0x128 winc/socket/source/socket.o
+                0x00003b16                recv
+ .text.close    0x00003c3e       0xce winc/socket/source/socket.o
+                0x00003c3e                close
  .text.spi_flash_enable
-                0x00006ed4       0xee winc/spi_flash/source/spi_flash.o
-                0x00006ed4                spi_flash_enable
- .text.avr-libc.fplib
-                0x00006fc2        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(cmpsf2.o)
-                0x00006fc2                __nesf2
-                0x00006fc2                __eqsf2
-                0x00006fc2                __cmpsf2
-                0x00006fc2                __ltsf2
-                0x00006fc2                __lesf2
- .text.avr-libc.fplib
-                0x00006fcc       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fixunssfsi.o)
-                0x00006fcc                __fixunssfsi
- .text.avr-libc.fplib
-                0x0000702a       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_cmp.o)
-                0x0000702a                __fp_cmp
- .text.avr-libc.fplib
-                0x00007072       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_split3.o)
-                0x00007072                __fp_split3
-                0x00007082                __fp_splitA
- .text.avr-libc.fplib
-                0x000070b6        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_zero.o)
-                0x000070b6                __fp_zero
-                0x000070b8                __fp_szero
- .text.avr-libc.fplib
-                0x000070c4        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(gesf2.o)
-                0x000070c4                __gesf2
-                0x000070c4                __gtsf2
- .text.avr-libc.fplib
-                0x000070ce        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3.o)
-                0x000070ce                __mulsf3
- .text.avr-libc.fplib
-                0x000070d6       0xd2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(mulsf3x.o)
-                0x000070f4                __mulsf3x
-                0x000070fa                __mulsf3_pse
- .text.avr-libc.fplib
-                0x000071a8        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_inf.o)
-                0x000071a8                __fp_inf
- .text.avr-libc.fplib
-                0x000071b4        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_nan.o)
-                0x000071b4                __fp_nan
- .text.avr-libc.fplib
-                0x000071ba        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscA.o)
-                0x000071ba                __fp_pscA
- .text.avr-libc.fplib
-                0x000071c8        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_pscB.o)
-                0x000071c8                __fp_pscB
- .text.avr-libc.fplib
-                0x000071d6       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libm.a(fp_round.o)
-                0x000071d6                __fp_round
+                0x00003d0c      0x1a0 winc/spi_flash/source/spi_flash.o
+                0x00003d0c                spi_flash_enable
  .text.libgcc.div
-                0x000071f8       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
-                0x000071f8                _div
-                0x000071f8                __divmodhi4
- .text.libgcc   0x00007220        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_tablejump2.o)
-                0x00007220                __tablejump2__
+                0x00003eac       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_divmodhi4.o)
+                0x00003eac                _div
+                0x00003eac                __divmodhi4
+ .text.libgcc   0x00003ed4        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_tablejump2.o)
+                0x00003ed4                __tablejump2__
  .text.libgcc.div
-                0x0000722c       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodhi4.o)
-                0x0000722c                __udivmodhi4
+                0x00003ee0       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_udivmodhi4.o)
+                0x00003ee0                __udivmodhi4
  .text.avr-libc
-                0x00007254        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(memset.o)
-                0x00007254                memset
+                0x00003f08       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strcmp.o)
+                0x00003f08                strcmp
  .text.avr-libc
-                0x00007262       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strcmp.o)
-                0x00007262                strcmp
+                0x00003f1a       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(printf.o)
+                0x00003f1a                printf
  .text.avr-libc
-                0x00007274       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(printf.o)
-                0x00007274                printf
+                0x00003f46       0x60 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(puts.o)
+                0x00003f46                puts
  .text.avr-libc
-                0x000072a0       0x60 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(puts.o)
-                0x000072a0                puts
+                0x00003fa6      0x3c2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(vfprintf_std.o)
+                0x00003fa6                vfprintf
  .text.avr-libc
-                0x00007300      0x3c2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(vfprintf_std.o)
-                0x00007300                vfprintf
+                0x00004368       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strnlen_P.o)
+                0x00004368                strnlen_P
  .text.avr-libc
-                0x000076c2       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strnlen_P.o)
-                0x000076c2                strnlen_P
+                0x0000437e       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strnlen.o)
+                0x0000437e                strnlen
  .text.avr-libc
-                0x000076d8       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(strnlen.o)
-                0x000076d8                strnlen
+                0x00004394       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(fputc.o)
+                0x00004394                fputc
  .text.avr-libc
-                0x000076ee       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(fputc.o)
-                0x000076ee                fputc
- .text.avr-libc
-                0x00007766       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(ultoa_invert.o)
-                0x00007766                __ultoa_invert
+                0x0000440c       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(ultoa_invert.o)
+                0x0000440c                __ultoa_invert
  .text.libgcc.prologue
-                0x00007822       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_prologue.o)
-                0x00007822                __prologue_saves__
+                0x000044c8       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_prologue.o)
+                0x000044c8                __prologue_saves__
  .text.libgcc.prologue
-                0x00007854       0x30 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_epilogue.o)
-                0x00007854                __epilogue_restores__
-                0x00007884                . = ALIGN (0x2)
+                0x000044fa       0x30 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_epilogue.o)
+                0x000044fa                __epilogue_restores__
+                0x0000452a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00007884        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
-                0x00007884                _exit
-                0x00007884                exit
+ .fini9         0x0000452a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
+                0x0000452a                _exit
+                0x0000452a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1705,29 +1389,30 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00007884        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
+ .fini0         0x0000452a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega3\libgcc.a(_exit.o)
  *(.fini0)
-                0x00007888                _etext = .
+                0x0000452e                _etext = .
 
-.rodata         0x0000b888      0x1b6 load address 0x00007888
+.rodata         0x0000852e      0x1b8 load address 0x0000452e
  *(.rodata)
- .rodata        0x0000b888      0x1b6 main.o
  *(.rodata*)
+ .rodata.str1.1
+                0x0000852e      0x1b8 main.o
  *(.gnu.linkonce.r*)
 
-.data           0x00802800       0x44 load address 0x00007a3e
+.data           0x00802800       0x44 load address 0x000046e6
                 0x00802800                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.mystdout
-                0x00802800        0xe main.o
- .data.tcp_server_socket
-                0x0080280e        0x1 main.o
- .data.tcp_client_socket
-                0x0080280f        0x1 main.o
  .data.msg_wifi_product
-                0x00802810       0x28 main.o
-                0x00802810                msg_wifi_product
+                0x00802800       0x28 main.o
+                0x00802800                msg_wifi_product
+ .data.tcp_client_socket
+                0x00802828        0x1 main.o
+ .data.tcp_server_socket
+                0x00802829        0x1 main.o
+ .data.mystdout
+                0x0080282a        0xe main.o
  .data.scheduler_dummy
                 0x00802838        0xa src/timeout.o
                 0x00802838                scheduler_dummy
@@ -1743,47 +1428,47 @@ END GROUP
                 0x00802844                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.wifi_connected
-                0x00802844        0x1 main.o
  .bss.gau8SocketTestBuffer
-                0x00802845      0x5b4 main.o
+                0x00802844      0x5b4 main.o
+ .bss.wifi_connected
+                0x00802df8        0x1 main.o
  .bss.SPI_0_desc
                 0x00802df9        0x1 src/spi_basic.o
- .bss.scheduler_list_head
-                0x00802dfa        0x2 src/timeout.o
-                0x00802dfa                scheduler_list_head
- .bss.scheduler_execute_queue_head
-                0x00802dfc        0x2 src/timeout.o
-                0x00802dfc                scheduler_execute_queue_head
- .bss.scheduler_absolute_time_of_last_timeout
-                0x00802dfe        0x4 src/timeout.o
-                0x00802dfe                scheduler_absolute_time_of_last_timeout
- .bss.scheduler_last_timer_load
-                0x00802e02        0x4 src/timeout.o
-                0x00802e02                scheduler_last_timer_load
  .bss.scheduler_is_running
-                0x00802e06        0x1 src/timeout.o
-                0x00802e06                scheduler_is_running
+                0x00802dfa        0x1 src/timeout.o
+                0x00802dfa                scheduler_is_running
+ .bss.scheduler_last_timer_load
+                0x00802dfb        0x4 src/timeout.o
+                0x00802dfb                scheduler_last_timer_load
+ .bss.scheduler_absolute_time_of_last_timeout
+                0x00802dff        0x4 src/timeout.o
+                0x00802dff                scheduler_absolute_time_of_last_timeout
+ .bss.scheduler_execute_queue_head
+                0x00802e03        0x2 src/timeout.o
+                0x00802e03                scheduler_execute_queue_head
+ .bss.scheduler_list_head
+                0x00802e05        0x2 src/timeout.o
+                0x00802e05                scheduler_list_head
  .bss.gpfIsr    0x00802e07        0x2 winc/bsp/source/nm_bsp_mega.o
- .bss.gu8ChNum  0x00802e09        0x1 winc/driver/source/m2m_wifi.o
- .bss.gu8scanInProgress
-                0x00802e0a        0x1 winc/driver/source/m2m_wifi.o
  .bss.gpfAppWifiCb
-                0x00802e0b        0x2 winc/driver/source/m2m_wifi.o
+                0x00802e09        0x2 winc/driver/source/m2m_wifi.o
+ .bss.gu8scanInProgress
+                0x00802e0b        0x1 winc/driver/source/m2m_wifi.o
+ .bss.gu8ChNum  0x00802e0c        0x1 winc/driver/source/m2m_wifi.o
  .bss.chipid.2327
                 0x00802e0d        0x4 winc/driver/source/nmasic.o
  .bss.gu8Crc_off
                 0x00802e11        0x1 winc/driver/source/nmspi.o
- .bss.gu16SessionID
-                0x00802e12        0x2 winc/socket/source/socket.o
-                0x00802e12                gu16SessionID
+ .bss.u8NextUdpSock.2562
+                0x00802e12        0x1 winc/socket/source/socket.o
+ .bss.u8NextTcpSock.2561
+                0x00802e13        0x1 winc/socket/source/socket.o
  .bss.gbSocketInit
                 0x00802e14        0x1 winc/socket/source/socket.o
                 0x00802e14                gbSocketInit
- .bss.u8NextTcpSock.2561
-                0x00802e15        0x1 winc/socket/source/socket.o
- .bss.u8NextUdpSock.2562
-                0x00802e16        0x1 winc/socket/source/socket.o
+ .bss.gu16SessionID
+                0x00802e15        0x2 winc/socket/source/socket.o
+                0x00802e15                gu16SessionID
  *(COMMON)
  COMMON         0x00802e17       0x73 main.o
                 0x00802e17                data_response
@@ -1804,8 +1489,8 @@ END GROUP
  COMMON         0x00802f27        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3\libc.a(iob.o)
                 0x00802f27                __iob
                 0x00802f2d                PROVIDE (__bss_end, .)
-                0x00007a3e                __data_load_start = LOADADDR (.data)
-                0x00007a82                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000046e6                __data_load_start = LOADADDR (.data)
+                0x0000472a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00802f2d        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -1904,7 +1589,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xc18
+.debug_aranges  0x00000000      0x950
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 atmel_start.o
@@ -1917,232 +1602,227 @@ END GROUP
  .debug_aranges
                 0x000000e0       0x20 src/bod.o
  .debug_aranges
-                0x00000100       0x28 src/clkctrl.o
+                0x00000100       0x20 src/clkctrl.o
  .debug_aranges
-                0x00000128       0x20 src/cpuint.o
+                0x00000120       0x20 src/cpuint.o
  .debug_aranges
-                0x00000148      0x190 src/driver_init.o
+                0x00000140       0x40 src/driver_init.o
  .debug_aranges
-                0x000002d8       0x20 src/protected_io.o
+                0x00000180       0x20 src/protected_io.o
  .debug_aranges
-                0x000002f8       0x20 src/slpctrl.o
+                0x000001a0       0x20 src/slpctrl.o
  .debug_aranges
-                0x00000318       0x50 src/spi_basic.o
+                0x000001c0       0x50 src/spi_basic.o
  .debug_aranges
-                0x00000368       0x98 src/timeout.o
+                0x00000210       0x98 src/timeout.o
  .debug_aranges
-                0x00000400       0x78 src/usart_basic.o
+                0x000002a8       0x78 src/usart_basic.o
  .debug_aranges
-                0x00000478       0xd8 winc/bsp/source/nm_bsp_mega.o
+                0x00000320       0x50 winc/bsp/source/nm_bsp_mega.o
  .debug_aranges
-                0x00000550       0x88 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                0x00000370       0x38 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
  .debug_aranges
-                0x000005d8       0x50 winc/common/source/nm_common.o
+                0x000003a8       0x50 winc/common/source/nm_common.o
  .debug_aranges
-                0x00000628       0x90 winc/driver/source/m2m_hif.o
+                0x000003f8       0x88 winc/driver/source/m2m_hif.o
  .debug_aranges
-                0x000006b8      0x1d0 winc/driver/source/m2m_wifi.o
+                0x00000480      0x1c8 winc/driver/source/m2m_wifi.o
  .debug_aranges
-                0x00000888       0xb0 winc/driver/source/nmasic.o
+                0x00000648       0xb0 winc/driver/source/nmasic.o
  .debug_aranges
-                0x00000938       0x70 winc/driver/source/nmbus.o
+                0x000006f8       0x60 winc/driver/source/nmbus.o
  .debug_aranges
-                0x000009a8       0x48 winc/driver/source/nmdrv.o
+                0x00000758       0x48 winc/driver/source/nmdrv.o
  .debug_aranges
-                0x000009f0       0xc8 winc/driver/source/nmspi.o
+                0x000007a0       0x90 winc/driver/source/nmspi.o
  .debug_aranges
-                0x00000ab8       0xc8 winc/socket/source/socket.o
+                0x00000830       0xc0 winc/socket/source/socket.o
  .debug_aranges
-                0x00000b80       0x98 winc/spi_flash/source/spi_flash.o
+                0x000008f0       0x60 winc/spi_flash/source/spi_flash.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xcdfe
+.debug_info     0x00000000    0x131b1
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x2517 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o
- .debug_info    0x00002517       0x7f atmel_start.o
- .debug_info    0x00002596      0x607 motoare.o
- .debug_info    0x00002b9d      0x347 winc_init.o
- .debug_info    0x00002ee4      0xb6c main.o
- .debug_info    0x00003a50       0x8d src/bod.o
- .debug_info    0x00003add      0x34c src/clkctrl.o
- .debug_info    0x00003e29       0x8d src/cpuint.o
- .debug_info    0x00003eb6      0xc81 src/driver_init.o
- .debug_info    0x00004b37       0x81 src/protected_io.o
- .debug_info    0x00004bb8       0x8d src/slpctrl.o
- .debug_info    0x00004c45      0x2e9 src/spi_basic.o
- .debug_info    0x00004f2e      0x81a src/timeout.o
- .debug_info    0x00005748      0x361 src/usart_basic.o
- .debug_info    0x00005aa9      0x87c winc/bsp/source/nm_bsp_mega.o
- .debug_info    0x00006325      0x70d winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .debug_info    0x00006a32      0x2ae winc/common/source/nm_common.o
- .debug_info    0x00006ce0      0x6b1 winc/driver/source/m2m_hif.o
- .debug_info    0x00007391     0x233b winc/driver/source/m2m_wifi.o
- .debug_info    0x000096cc      0x6ab winc/driver/source/nmasic.o
- .debug_info    0x00009d77      0x3ad winc/driver/source/nmbus.o
- .debug_info    0x0000a124      0x454 winc/driver/source/nmdrv.o
- .debug_info    0x0000a578      0x9f0 winc/driver/source/nmspi.o
- .debug_info    0x0000af68     0x17b3 winc/socket/source/socket.o
- .debug_info    0x0000c71b      0x6e3 winc/spi_flash/source/spi_flash.o
+ .debug_info    0x00002517       0x9a atmel_start.o
+ .debug_info    0x000025b1      0x607 motoare.o
+ .debug_info    0x00002bb8      0x380 winc_init.o
+ .debug_info    0x00002f38     0x11ce main.o
+ .debug_info    0x00004106       0x8d src/bod.o
+ .debug_info    0x00004193      0x38e src/clkctrl.o
+ .debug_info    0x00004521       0x8d src/cpuint.o
+ .debug_info    0x000045ae     0x129a src/driver_init.o
+ .debug_info    0x00005848       0x6c src/protected_io.o
+ .debug_info    0x000058b4       0x8d src/slpctrl.o
+ .debug_info    0x00005941      0x2f3 src/spi_basic.o
+ .debug_info    0x00005c34      0xa0d src/timeout.o
+ .debug_info    0x00006641      0x36a src/usart_basic.o
+ .debug_info    0x000069ab      0xb19 winc/bsp/source/nm_bsp_mega.o
+ .debug_info    0x000074c4      0x986 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+ .debug_info    0x00007e4a      0x314 winc/common/source/nm_common.o
+ .debug_info    0x0000815e      0xc1a winc/driver/source/m2m_hif.o
+ .debug_info    0x00008d78     0x3897 winc/driver/source/m2m_wifi.o
+ .debug_info    0x0000c60f     0x12a5 winc/driver/source/nmasic.o
+ .debug_info    0x0000d8b4      0x61e winc/driver/source/nmbus.o
+ .debug_info    0x0000ded2      0x7c9 winc/driver/source/nmdrv.o
+ .debug_info    0x0000e69b     0x12fa winc/driver/source/nmspi.o
+ .debug_info    0x0000f995     0x2288 winc/socket/source/socket.o
+ .debug_info    0x00011c1d     0x1594 winc/spi_flash/source/spi_flash.o
 
-.debug_abbrev   0x00000000     0x4320
+.debug_abbrev   0x00000000     0x4d63
  *(.debug_abbrev)
  .debug_abbrev  0x00000000     0x2320 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o
- .debug_abbrev  0x00002320       0x44 atmel_start.o
- .debug_abbrev  0x00002364      0x106 motoare.o
- .debug_abbrev  0x0000246a       0xdb winc_init.o
- .debug_abbrev  0x00002545      0x203 main.o
- .debug_abbrev  0x00002748       0x51 src/bod.o
- .debug_abbrev  0x00002799       0xcb src/clkctrl.o
- .debug_abbrev  0x00002864       0x51 src/cpuint.o
- .debug_abbrev  0x000028b5      0x1c4 src/driver_init.o
- .debug_abbrev  0x00002a79       0x14 src/protected_io.o
- .debug_abbrev  0x00002a8d       0x51 src/slpctrl.o
- .debug_abbrev  0x00002ade      0x155 src/spi_basic.o
- .debug_abbrev  0x00002c33      0x242 src/timeout.o
- .debug_abbrev  0x00002e75      0x166 src/usart_basic.o
- .debug_abbrev  0x00002fdb      0x288 winc/bsp/source/nm_bsp_mega.o
- .debug_abbrev  0x00003263      0x209 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .debug_abbrev  0x0000346c       0xf3 winc/common/source/nm_common.o
- .debug_abbrev  0x0000355f      0x217 winc/driver/source/m2m_hif.o
- .debug_abbrev  0x00003776      0x239 winc/driver/source/m2m_wifi.o
- .debug_abbrev  0x000039af      0x1c2 winc/driver/source/nmasic.o
- .debug_abbrev  0x00003b71      0x142 winc/driver/source/nmbus.o
- .debug_abbrev  0x00003cb3      0x14a winc/driver/source/nmdrv.o
- .debug_abbrev  0x00003dfd      0x1bb winc/driver/source/nmspi.o
- .debug_abbrev  0x00003fb8      0x219 winc/socket/source/socket.o
- .debug_abbrev  0x000041d1      0x14f winc/spi_flash/source/spi_flash.o
+ .debug_abbrev  0x00002320       0x63 atmel_start.o
+ .debug_abbrev  0x00002383      0x106 motoare.o
+ .debug_abbrev  0x00002489      0x121 winc_init.o
+ .debug_abbrev  0x000025aa      0x2e8 main.o
+ .debug_abbrev  0x00002892       0x51 src/bod.o
+ .debug_abbrev  0x000028e3      0x105 src/clkctrl.o
+ .debug_abbrev  0x000029e8       0x51 src/cpuint.o
+ .debug_abbrev  0x00002a39      0x1cf src/driver_init.o
+ .debug_abbrev  0x00002c08       0x14 src/protected_io.o
+ .debug_abbrev  0x00002c1c       0x51 src/slpctrl.o
+ .debug_abbrev  0x00002c6d      0x155 src/spi_basic.o
+ .debug_abbrev  0x00002dc2      0x37c src/timeout.o
+ .debug_abbrev  0x0000313e      0x171 src/usart_basic.o
+ .debug_abbrev  0x000032af      0x276 winc/bsp/source/nm_bsp_mega.o
+ .debug_abbrev  0x00003525      0x28d winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+ .debug_abbrev  0x000037b2      0x135 winc/common/source/nm_common.o
+ .debug_abbrev  0x000038e7      0x34e winc/driver/source/m2m_hif.o
+ .debug_abbrev  0x00003c35      0x2cf winc/driver/source/m2m_wifi.o
+ .debug_abbrev  0x00003f04      0x27f winc/driver/source/nmasic.o
+ .debug_abbrev  0x00004183      0x1d4 winc/driver/source/nmbus.o
+ .debug_abbrev  0x00004357      0x1b6 winc/driver/source/nmdrv.o
+ .debug_abbrev  0x0000450d      0x329 winc/driver/source/nmspi.o
+ .debug_abbrev  0x00004836      0x2c3 winc/socket/source/socket.o
+ .debug_abbrev  0x00004af9      0x26a winc/spi_flash/source/spi_flash.o
 
-.debug_line     0x00000000     0x760d
+.debug_line     0x00000000     0x5ce0
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x187 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o
- .debug_line    0x00000187       0x4a atmel_start.o
- .debug_line    0x000001d1      0x2d3 motoare.o
- .debug_line    0x000004a4      0x13b winc_init.o
- .debug_line    0x000005df      0x45a main.o
- .debug_line    0x00000a39       0xa8 src/bod.o
- .debug_line    0x00000ae1      0x144 src/clkctrl.o
- .debug_line    0x00000c25       0xab src/cpuint.o
- .debug_line    0x00000cd0      0x9d0 src/driver_init.o
- .debug_line    0x000016a0       0x5b src/protected_io.o
- .debug_line    0x000016fb       0xac src/slpctrl.o
- .debug_line    0x000017a7      0x290 src/spi_basic.o
- .debug_line    0x00001a37      0x5c4 src/timeout.o
- .debug_line    0x00001ffb      0x2bb src/usart_basic.o
- .debug_line    0x000022b6      0x61f winc/bsp/source/nm_bsp_mega.o
- .debug_line    0x000028d5      0x475 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .debug_line    0x00002d4a      0x266 winc/common/source/nm_common.o
- .debug_line    0x00002fb0      0x716 winc/driver/source/m2m_hif.o
- .debug_line    0x000036c6     0x10c7 winc/driver/source/m2m_wifi.o
- .debug_line    0x0000478d      0x84b winc/driver/source/nmasic.o
- .debug_line    0x00004fd8      0x289 winc/driver/source/nmbus.o
- .debug_line    0x00005261      0x441 winc/driver/source/nmdrv.o
- .debug_line    0x000056a2      0xacb winc/driver/source/nmspi.o
- .debug_line    0x0000616d      0xd2e winc/socket/source/socket.o
- .debug_line    0x00006e9b      0x772 winc/spi_flash/source/spi_flash.o
+ .debug_line    0x00000187       0x60 atmel_start.o
+ .debug_line    0x000001e7      0x2b5 motoare.o
+ .debug_line    0x0000049c      0x131 winc_init.o
+ .debug_line    0x000005cd      0x45c main.o
+ .debug_line    0x00000a29       0xa2 src/bod.o
+ .debug_line    0x00000acb      0x136 src/clkctrl.o
+ .debug_line    0x00000c01       0xa5 src/cpuint.o
+ .debug_line    0x00000ca6      0x391 src/driver_init.o
+ .debug_line    0x00001037       0x5b src/protected_io.o
+ .debug_line    0x00001092       0xa6 src/slpctrl.o
+ .debug_line    0x00001138      0x230 src/spi_basic.o
+ .debug_line    0x00001368      0x57a src/timeout.o
+ .debug_line    0x000018e2      0x267 src/usart_basic.o
+ .debug_line    0x00001b49      0x301 winc/bsp/source/nm_bsp_mega.o
+ .debug_line    0x00001e4a      0x2d7 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+ .debug_line    0x00002121      0x1f0 winc/common/source/nm_common.o
+ .debug_line    0x00002311      0x65a winc/driver/source/m2m_hif.o
+ .debug_line    0x0000296b      0xd11 winc/driver/source/m2m_wifi.o
+ .debug_line    0x0000367c      0x706 winc/driver/source/nmasic.o
+ .debug_line    0x00003d82      0x218 winc/driver/source/nmbus.o
+ .debug_line    0x00003f9a      0x3d2 winc/driver/source/nmdrv.o
+ .debug_line    0x0000436c      0x7db winc/driver/source/nmspi.o
+ .debug_line    0x00004b47      0xc84 winc/socket/source/socket.o
+ .debug_line    0x000057cb      0x515 winc/spi_flash/source/spi_flash.o
 
-.debug_frame    0x00000000     0x3298
+.debug_frame    0x00000000     0x24cc
  *(.debug_frame)
- .debug_frame   0x00000000       0x34 atmel_start.o
- .debug_frame   0x00000034      0x134 motoare.o
- .debug_frame   0x00000168       0x34 winc_init.o
- .debug_frame   0x0000019c       0xcc main.o
- .debug_frame   0x00000268       0x34 src/bod.o
- .debug_frame   0x0000029c       0x54 src/clkctrl.o
- .debug_frame   0x000002f0       0x34 src/cpuint.o
- .debug_frame   0x00000324      0x5f4 src/driver_init.o
- .debug_frame   0x00000918       0x34 src/slpctrl.o
- .debug_frame   0x0000094c       0xf4 src/spi_basic.o
- .debug_frame   0x00000a40      0x2ac src/timeout.o
- .debug_frame   0x00000cec      0x194 src/usart_basic.o
- .debug_frame   0x00000e80      0x358 winc/bsp/source/nm_bsp_mega.o
- .debug_frame   0x000011d8      0x1d4 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .debug_frame   0x000013ac       0xf4 winc/common/source/nm_common.o
- .debug_frame   0x000014a0      0x234 winc/driver/source/m2m_hif.o
- .debug_frame   0x000016d4      0xbb8 winc/driver/source/m2m_wifi.o
- .debug_frame   0x0000228c      0x28c winc/driver/source/nmasic.o
- .debug_frame   0x00002518      0x19c winc/driver/source/nmbus.o
- .debug_frame   0x000026b4       0xec winc/driver/source/nmdrv.o
- .debug_frame   0x000027a0      0x3a8 winc/driver/source/nmspi.o
- .debug_frame   0x00002b48      0x4cc winc/socket/source/socket.o
- .debug_frame   0x00003014      0x284 winc/spi_flash/source/spi_flash.o
+ .debug_frame   0x00000000       0x24 atmel_start.o
+ .debug_frame   0x00000024       0xa4 motoare.o
+ .debug_frame   0x000000c8       0x40 winc_init.o
+ .debug_frame   0x00000108       0xe0 main.o
+ .debug_frame   0x000001e8       0x24 src/bod.o
+ .debug_frame   0x0000020c       0x24 src/clkctrl.o
+ .debug_frame   0x00000230       0x24 src/cpuint.o
+ .debug_frame   0x00000254       0x64 src/driver_init.o
+ .debug_frame   0x000002b8       0x24 src/slpctrl.o
+ .debug_frame   0x000002dc       0x84 src/spi_basic.o
+ .debug_frame   0x00000360      0x230 src/timeout.o
+ .debug_frame   0x00000590       0xe0 src/usart_basic.o
+ .debug_frame   0x00000670       0xcc winc/bsp/source/nm_bsp_mega.o
+ .debug_frame   0x0000073c       0x8c winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+ .debug_frame   0x000007c8       0xcc winc/common/source/nm_common.o
+ .debug_frame   0x00000894      0x204 winc/driver/source/m2m_hif.o
+ .debug_frame   0x00000a98      0xa2c winc/driver/source/m2m_wifi.o
+ .debug_frame   0x000014c4      0x2ec winc/driver/source/nmasic.o
+ .debug_frame   0x000017b0      0x164 winc/driver/source/nmbus.o
+ .debug_frame   0x00001914       0xf8 winc/driver/source/nmdrv.o
+ .debug_frame   0x00001a0c      0x378 winc/driver/source/nmspi.o
+ .debug_frame   0x00001d84      0x4b4 winc/socket/source/socket.o
+ .debug_frame   0x00002238      0x294 winc/spi_flash/source/spi_flash.o
 
-.debug_str      0x00000000     0x583a
+.debug_str      0x00000000     0x5831
  *(.debug_str)
  .debug_str     0x00000000      0xfc0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o
- .debug_str     0x00000fc0      0x140 atmel_start.o
-                                0x174 (size before relaxing)
- .debug_str     0x00001100      0x3e9 motoare.o
+ .debug_str     0x00000fc0      0x14c atmel_start.o
+                                0x180 (size before relaxing)
+ .debug_str     0x0000110c      0x3e9 motoare.o
                                 0x578 (size before relaxing)
- .debug_str     0x000014e9      0x1a7 winc_init.o
-                                0x347 (size before relaxing)
- .debug_str     0x00001690      0x6e7 main.o
-                                0xa5c (size before relaxing)
- .debug_str     0x00001d77       0x5b src/bod.o
-                                0x182 (size before relaxing)
- .debug_str     0x00001dd2      0x218 src/clkctrl.o
-                                0x46c (size before relaxing)
- .debug_str     0x00001fea       0x1c src/cpuint.o
-                                0x188 (size before relaxing)
- .debug_str     0x00002006      0x5b4 src/driver_init.o
-                                0x87e (size before relaxing)
- .debug_str     0x000025ba       0x1e src/slpctrl.o
-                                0x18a (size before relaxing)
- .debug_str     0x000025d8      0x175 src/spi_basic.o
-                                0x34c (size before relaxing)
- .debug_str     0x0000274d      0x56c src/timeout.o
-                                0x82e (size before relaxing)
- .debug_str     0x00002cb9      0x19b src/usart_basic.o
+ .debug_str     0x000014f5      0x1c1 winc_init.o
+                                0x361 (size before relaxing)
+ .debug_str     0x000016b6      0x75f main.o
+                                0xbbc (size before relaxing)
+ .debug_str     0x00001e15       0x16 src/bod.o
+                                0x16d (size before relaxing)
+ .debug_str     0x00001e2b      0x22b src/clkctrl.o
+                                0x47f (size before relaxing)
+ .debug_str     0x00002056       0x1c src/cpuint.o
+                                0x173 (size before relaxing)
+ .debug_str     0x00002072      0x5ef src/driver_init.o
+                                0x8e7 (size before relaxing)
+ .debug_str     0x00002661       0x11 src/slpctrl.o
+                                0x175 (size before relaxing)
+ .debug_str     0x00002672      0x16a src/spi_basic.o
+                                0x337 (size before relaxing)
+ .debug_str     0x000027dc      0x555 src/timeout.o
+                                0x819 (size before relaxing)
+ .debug_str     0x00002d31      0x18e src/usart_basic.o
                                 0x36a (size before relaxing)
- .debug_str     0x00002e54      0x130 winc/bsp/source/nm_bsp_mega.o
-                                0x6e5 (size before relaxing)
- .debug_str     0x00002f84      0x13b winc/bus_wrapper/source/nm_bus_wrapper_mega.o
-                                0x5dd (size before relaxing)
- .debug_str     0x000030bf       0xcf winc/common/source/nm_common.o
-                                0x230 (size before relaxing)
- .debug_str     0x0000318e      0x31f winc/driver/source/m2m_hif.o
-                                0x4b7 (size before relaxing)
- .debug_str     0x000034ad     0x14cb winc/driver/source/m2m_wifi.o
-                               0x1d3c (size before relaxing)
- .debug_str     0x00004978      0x200 winc/driver/source/nmasic.o
-                                0x434 (size before relaxing)
- .debug_str     0x00004b78       0xe1 winc/driver/source/nmbus.o
-                                0x2ac (size before relaxing)
- .debug_str     0x00004c59       0xcc winc/driver/source/nmdrv.o
-                                0x3ab (size before relaxing)
- .debug_str     0x00004d25      0x1bd winc/driver/source/nmspi.o
-                                0x407 (size before relaxing)
- .debug_str     0x00004ee2      0x76d winc/socket/source/socket.o
-                                0xc9c (size before relaxing)
- .debug_str     0x0000564f      0x1eb winc/spi_flash/source/spi_flash.o
-                                0x38e (size before relaxing)
+ .debug_str     0x00002ebf      0x12c winc/bsp/source/nm_bsp_mega.o
+                                0x6d8 (size before relaxing)
+ .debug_str     0x00002feb      0x13b winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+                                0x5e2 (size before relaxing)
+ .debug_str     0x00003126       0xcf winc/common/source/nm_common.o
+                                0x21b (size before relaxing)
+ .debug_str     0x000031f5      0x341 winc/driver/source/m2m_hif.o
+                                0x538 (size before relaxing)
+ .debug_str     0x00003536     0x1521 winc/driver/source/m2m_wifi.o
+                               0x1e5f (size before relaxing)
+ .debug_str     0x00004a57      0x1db winc/driver/source/nmasic.o
+                                0x48b (size before relaxing)
+ .debug_str     0x00004c32      0x112 winc/driver/source/nmbus.o
+                                0x31d (size before relaxing)
+ .debug_str     0x00004d44       0xa9 winc/driver/source/nmdrv.o
+                                0x490 (size before relaxing)
+ .debug_str     0x00004ded      0x137 winc/driver/source/nmspi.o
+                                0x40c (size before relaxing)
+ .debug_str     0x00004f24      0x733 winc/socket/source/socket.o
+                                0xccd (size before relaxing)
+ .debug_str     0x00005657      0x1da winc/spi_flash/source/spi_flash.o
+                                0x3d3 (size before relaxing)
 
-.debug_loc      0x00000000     0x6c9e
+.debug_loc      0x00000000     0xc7a6
  *(.debug_loc)
- .debug_loc     0x00000000       0x3b atmel_start.o
- .debug_loc     0x0000003b      0x213 motoare.o
- .debug_loc     0x0000024e       0x47 winc_init.o
- .debug_loc     0x00000295      0x199 main.o
- .debug_loc     0x0000042e       0x3b src/bod.o
- .debug_loc     0x00000469       0x83 src/clkctrl.o
- .debug_loc     0x000004ec       0x3b src/cpuint.o
- .debug_loc     0x00000527      0xd03 src/driver_init.o
- .debug_loc     0x0000122a       0x3b src/slpctrl.o
- .debug_loc     0x00001265      0x1ce src/spi_basic.o
- .debug_loc     0x00001433      0x5d8 src/timeout.o
- .debug_loc     0x00001a0b      0x2de src/usart_basic.o
- .debug_loc     0x00001ce9      0x727 winc/bsp/source/nm_bsp_mega.o
- .debug_loc     0x00002410      0x3e1 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .debug_loc     0x000027f1      0x1f2 winc/common/source/nm_common.o
- .debug_loc     0x000029e3      0x4a8 winc/driver/source/m2m_hif.o
- .debug_loc     0x00002e8b     0x1ac4 winc/driver/source/m2m_wifi.o
- .debug_loc     0x0000494f      0x574 winc/driver/source/nmasic.o
- .debug_loc     0x00004ec3      0x37a winc/driver/source/nmbus.o
- .debug_loc     0x0000523d      0x1e1 winc/driver/source/nmdrv.o
- .debug_loc     0x0000541e      0x826 winc/driver/source/nmspi.o
- .debug_loc     0x00005c44      0xacc winc/socket/source/socket.o
- .debug_loc     0x00006710      0x58e winc/spi_flash/source/spi_flash.o
+ .debug_loc     0x00000000       0x97 winc_init.o
+ .debug_loc     0x00000097      0x673 main.o
+ .debug_loc     0x0000070a       0x29 src/clkctrl.o
+ .debug_loc     0x00000733      0x5b0 src/driver_init.o
+ .debug_loc     0x00000ce3      0x181 src/spi_basic.o
+ .debug_loc     0x00000e64      0x8bf src/timeout.o
+ .debug_loc     0x00001723       0x64 src/usart_basic.o
+ .debug_loc     0x00001787      0x45c winc/bsp/source/nm_bsp_mega.o
+ .debug_loc     0x00001be3      0x4a2 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+ .debug_loc     0x00002085      0x6ef winc/common/source/nm_common.o
+ .debug_loc     0x00002774      0x9eb winc/driver/source/m2m_hif.o
+ .debug_loc     0x0000315f     0x2e35 winc/driver/source/m2m_wifi.o
+ .debug_loc     0x00005f94      0xb8c winc/driver/source/nmasic.o
+ .debug_loc     0x00006b20      0x7c8 winc/driver/source/nmbus.o
+ .debug_loc     0x000072e8      0x645 winc/driver/source/nmdrv.o
+ .debug_loc     0x0000792d     0x162e winc/driver/source/nmspi.o
+ .debug_loc     0x00008f5b     0x296b winc/socket/source/socket.o
+ .debug_loc     0x0000b8c6      0xee0 winc/spi_flash/source/spi_flash.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2162,31 +1842,31 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0xbd0
+.debug_ranges   0x00000000      0x928
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 atmel_start.o
  .debug_ranges  0x00000010       0x50 motoare.o
  .debug_ranges  0x00000060       0x10 winc_init.o
- .debug_ranges  0x00000070       0xa8 main.o
- .debug_ranges  0x00000118       0x10 src/bod.o
- .debug_ranges  0x00000128       0x18 src/clkctrl.o
- .debug_ranges  0x00000140       0x10 src/cpuint.o
- .debug_ranges  0x00000150      0x180 src/driver_init.o
- .debug_ranges  0x000002d0       0x10 src/slpctrl.o
- .debug_ranges  0x000002e0       0x40 src/spi_basic.o
- .debug_ranges  0x00000320       0x88 src/timeout.o
- .debug_ranges  0x000003a8       0x68 src/usart_basic.o
- .debug_ranges  0x00000410       0xc8 winc/bsp/source/nm_bsp_mega.o
- .debug_ranges  0x000004d8       0x78 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
- .debug_ranges  0x00000550       0x40 winc/common/source/nm_common.o
- .debug_ranges  0x00000590       0xc8 winc/driver/source/m2m_hif.o
- .debug_ranges  0x00000658      0x1d8 winc/driver/source/m2m_wifi.o
- .debug_ranges  0x00000830       0xb8 winc/driver/source/nmasic.o
- .debug_ranges  0x000008e8       0x60 winc/driver/source/nmbus.o
- .debug_ranges  0x00000948       0x38 winc/driver/source/nmdrv.o
- .debug_ranges  0x00000980       0xb8 winc/driver/source/nmspi.o
- .debug_ranges  0x00000a38      0x110 winc/socket/source/socket.o
- .debug_ranges  0x00000b48       0x88 winc/spi_flash/source/spi_flash.o
+ .debug_ranges  0x00000070       0x30 main.o
+ .debug_ranges  0x000000a0       0x10 src/bod.o
+ .debug_ranges  0x000000b0       0x10 src/clkctrl.o
+ .debug_ranges  0x000000c0       0x10 src/cpuint.o
+ .debug_ranges  0x000000d0       0x30 src/driver_init.o
+ .debug_ranges  0x00000100       0x10 src/slpctrl.o
+ .debug_ranges  0x00000110       0x40 src/spi_basic.o
+ .debug_ranges  0x00000150       0xa0 src/timeout.o
+ .debug_ranges  0x000001f0       0x68 src/usart_basic.o
+ .debug_ranges  0x00000258       0x40 winc/bsp/source/nm_bsp_mega.o
+ .debug_ranges  0x00000298       0x28 winc/bus_wrapper/source/nm_bus_wrapper_mega.o
+ .debug_ranges  0x000002c0       0x58 winc/common/source/nm_common.o
+ .debug_ranges  0x00000318       0xc0 winc/driver/source/m2m_hif.o
+ .debug_ranges  0x000003d8      0x200 winc/driver/source/m2m_wifi.o
+ .debug_ranges  0x000005d8       0xa0 winc/driver/source/nmasic.o
+ .debug_ranges  0x00000678       0x50 winc/driver/source/nmbus.o
+ .debug_ranges  0x000006c8       0x38 winc/driver/source/nmdrv.o
+ .debug_ranges  0x00000700       0xc8 winc/driver/source/nmspi.o
+ .debug_ranges  0x000007c8       0xf8 winc/socket/source/socket.o
+ .debug_ranges  0x000008c0       0x68 winc/spi_flash/source/spi_flash.o
 
 .debug_macro
  *(.debug_macro)
