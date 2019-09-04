@@ -34,12 +34,23 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../Config/ \
+../Debug/ \
+../Debug/ \
+../Debug/mqtt/ \
+../Debug/mqtt/ \
+../Debug/mqtt/mqtt_comm_bsd/ \
+../Debug/mqtt/mqtt_core/ \
+../Debug/mqtt/mqtt_exchange_buffer/ \
 ../doxygen/ \
 ../doxygen/generator/ \
 ../examples/ \
 ../examples/include/ \
 ../examples/src/ \
 ../include/ \
+../mqtt/ \
+../mqtt/mqtt_comm_bsd/ \
+../mqtt/mqtt_core/ \
+../mqtt/mqtt_exchange_buffer/ \
 ../src/ \
 ../utils/ \
 ../utils/assembler/ \
@@ -68,7 +79,12 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../atmel_start.c \
+../debug_print.c \
 ../motoare.c \
+../mqtt/mqtt_comm_bsd/mqtt_comm_layer.c \
+../mqtt/mqtt_core/mqtt_core.c \
+../mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.c \
+../mqtt/mqtt_packetTransfer_interface.c \
 ../winc_init.c \
 ../driver_isr.c \
 ../examples/src/spi_basic_example.c \
@@ -114,7 +130,12 @@ ASM_SRCS +=
 
 OBJS +=  \
 atmel_start.o \
+debug_print.o \
 motoare.o \
+mqtt/mqtt_comm_bsd/mqtt_comm_layer.o \
+mqtt/mqtt_core/mqtt_core.o \
+mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.o \
+mqtt/mqtt_packetTransfer_interface.o \
 winc_init.o \
 driver_isr.o \
 examples/src/spi_basic_example.o \
@@ -153,7 +174,12 @@ winc/spi_flash/source/spi_flash.o
 
 OBJS_AS_ARGS +=  \
 atmel_start.o \
+debug_print.o \
 motoare.o \
+mqtt/mqtt_comm_bsd/mqtt_comm_layer.o \
+mqtt/mqtt_core/mqtt_core.o \
+mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.o \
+mqtt/mqtt_packetTransfer_interface.o \
 winc_init.o \
 driver_isr.o \
 examples/src/spi_basic_example.o \
@@ -192,7 +218,12 @@ winc/spi_flash/source/spi_flash.o
 
 C_DEPS +=  \
 atmel_start.d \
+debug_print.d \
 motoare.d \
+mqtt/mqtt_comm_bsd/mqtt_comm_layer.d \
+mqtt/mqtt_core/mqtt_core.d \
+mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.d \
+mqtt/mqtt_packetTransfer_interface.d \
 winc_init.d \
 driver_isr.d \
 examples/src/spi_basic_example.d \
@@ -231,7 +262,12 @@ winc/spi_flash/source/spi_flash.d
 
 C_DEPS_AS_ARGS +=  \
 atmel_start.d \
+debug_print.d \
 motoare.d \
+mqtt/mqtt_comm_bsd/mqtt_comm_layer.d \
+mqtt/mqtt_core/mqtt_core.d \
+mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.d \
+mqtt/mqtt_packetTransfer_interface.d \
 winc_init.d \
 driver_isr.d \
 examples/src/spi_basic_example.d \
@@ -285,252 +321,287 @@ LINKER_SCRIPT_DEP+=
 ./atmel_start.o: .././atmel_start.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./debug_print.o: .././debug_print.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./motoare.o: .././motoare.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+mqtt/mqtt_comm_bsd/mqtt_comm_layer.o: ../mqtt/mqtt_comm_bsd/mqtt_comm_layer.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+mqtt/mqtt_core/mqtt_core.o: ../mqtt/mqtt_core/mqtt_core.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.o: ../mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+mqtt/mqtt_packetTransfer_interface.o: ../mqtt/mqtt_packetTransfer_interface.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./winc_init.o: .././winc_init.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./driver_isr.o: .././driver_isr.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 examples/src/spi_basic_example.o: ../examples/src/spi_basic_example.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 examples/src/timeout_example.o: ../examples/src/timeout_example.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 examples/src/usart_basic_example.o: ../examples/src/usart_basic_example.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./main.o: .././main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/bod.o: ../src/bod.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/clkctrl.o: ../src/clkctrl.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/cpuint.o: ../src/cpuint.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/driver_init.o: ../src/driver_init.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/fingerprint.o: ../src/fingerprint.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/http.o: ../src/http.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/slpctrl.o: ../src/slpctrl.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/spi_basic.o: ../src/spi_basic.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/timeout.o: ../src/timeout.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/usart_basic.o: ../src/usart_basic.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/bsp/source/nm_bsp_mega.o: ../winc/bsp/source/nm_bsp_mega.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/bus_wrapper/source/nm_bus_wrapper_mega.o: ../winc/bus_wrapper/source/nm_bus_wrapper_mega.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/common/source/nm_common.o: ../winc/common/source/nm_common.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_ate_mode.o: ../winc/driver/source/m2m_ate_mode.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_crypto.o: ../winc/driver/source/m2m_crypto.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_hif.o: ../winc/driver/source/m2m_hif.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_ota.o: ../winc/driver/source/m2m_ota.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_periph.o: ../winc/driver/source/m2m_periph.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_ssl.o: ../winc/driver/source/m2m_ssl.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/m2m_wifi.o: ../winc/driver/source/m2m_wifi.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/nmasic.o: ../winc/driver/source/nmasic.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/nmbus.o: ../winc/driver/source/nmbus.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/nmdrv.o: ../winc/driver/source/nmdrv.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/nmi2c.o: ../winc/driver/source/nmi2c.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/nmspi.o: ../winc/driver/source/nmspi.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/driver/source/nmuart.o: ../winc/driver/source/nmuart.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/socket/source/socket.o: ../winc/socket/source/socket.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 winc/spi_flash/source/spi_flash.o: ../winc/spi_flash/source/spi_flash.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

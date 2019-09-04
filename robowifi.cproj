@@ -254,6 +254,7 @@
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>DEBUG</Value>
+      <Value>TCPIP_BSD</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
@@ -275,7 +276,6 @@
       <Value>../Config</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcc.compiler.optimization.UseShortCalls>True</avrgcc.compiler.optimization.UseShortCalls>
@@ -310,13 +310,25 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="adafruit\" />
     <Folder Include="Config\" />
+    <Folder Include="Debug\" />
+    <Folder Include="Debug\" />
+    <Folder Include="Debug\mqtt\" />
+    <Folder Include="Debug\mqtt\" />
+    <Folder Include="Debug\mqtt\mqtt_comm_bsd\" />
+    <Folder Include="Debug\mqtt\mqtt_core\" />
+    <Folder Include="Debug\mqtt\mqtt_exchange_buffer\" />
     <Folder Include="doxygen\" />
     <Folder Include="doxygen\generator\" />
     <Folder Include="examples\" />
     <Folder Include="examples\include\" />
     <Folder Include="examples\src\" />
     <Folder Include="include\" />
+    <Folder Include="mqtt\" />
+    <Folder Include="mqtt\mqtt_comm_bsd\" />
+    <Folder Include="mqtt\mqtt_core\" />
+    <Folder Include="mqtt\mqtt_exchange_buffer\" />
     <Folder Include="src\" />
     <Folder Include="utils\" />
     <Folder Include="utils\assembler\" />
@@ -342,16 +354,55 @@
     <Folder Include="winc\spi_flash\source" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adafruit\adafruit_service.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="atmel_start.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="atmel_start.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Config\IoT_Sensor_Node_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="debug_print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="debug_print.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="motoare.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="motoare.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_comm_bsd\mqtt_comm_layer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_comm_bsd\mqtt_comm_layer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_core\mqtt_core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_core\mqtt_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_exchange_buffer\mqtt_exchange_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_exchange_buffer\mqtt_exchange_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_packetTransfer_interface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mqtt\mqtt_packetTransfer_interface.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="winc_init.h">

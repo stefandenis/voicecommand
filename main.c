@@ -1,3 +1,4 @@
+// TODO : optimize level to O1
 #define F_CPU 8000000
 #include <util/delay.h>
 
@@ -13,7 +14,8 @@
  #include "winc/socket/include/socket.h"
  #include "winc/socket/include/m2m_socket_host_if.h"
  #include "motoare.h"
- 
+ #include "mqtt/mqtt_core/mqtt_core.h"
+ #include "mqtt/mqtt_comm_bsd/mqtt_comm_layer.h"
  int usart_putchar_printf(char var, FILE *stream);
  
  static FILE mystdout = FDEV_SETUP_STREAM(usart_putchar_printf, NULL, _FDEV_SETUP_WRITE);
@@ -41,6 +43,8 @@ int usart_putchar_printf(char var, FILE *stream){
 
 #define MAX_LENGTH 100
 
+#define MQTT_CID_LENGTH 100
+#define MQTT_TOPIC_LENGTH 38
 
 /* Sockets for tcp communication */
 static SOCKET tcp_server_socket = -1;
@@ -63,6 +67,16 @@ int index;
 volatile char data_response;
 char order[10];
 
+char Password[456]="qwertyhnkl";
+char clientID[]="5dad78fc-6853-4115-862e-9de796fe2eff";
+char mqttTopic[MQTT_TOPIC_LENGTH];
+char mqttHost[] = "io.adafruit.com";
+char Username[]="aphosura4ever";
+char insecurePort[]="1883";
+
+
+void received_from_adafruit(uint8_t *topic, uint8_t *payload);
+
 void get_command(char *str,tstrSocketRecvMsg *pCommand){
 
 
@@ -80,6 +94,10 @@ while(*(pCommand->pu8Buffer+i) != 0x0D){
 }
 
 }
+
+
+
+
 
 
 /**
@@ -254,7 +272,29 @@ static void wifi_cb(uint8_t u8MsgType, void *pvMsg)
 
 
 
-
+bool mqtt_client_connect(){
+	bool result;
+	MQTT_ClientInitialise();
+	mqttConnectPacket adafruitConnectPacket;
+	
+	memset(&adafruitConnectPacket, 0, sizeof(mqttConnectPacket));
+	
+	adafruitConnectPacket.connectVariableHeader.connectFlagsByte.All = 0x02;
+	adafruitConnectPacket.connectVariableHeader.keepAliveTimer       = 10;
+	adafruitConnectPacket.clientID                                   = (uint8_t *)clientID;
+	adafruitConnectPacket.password                                   = (uint8_t *)Password;
+	adafruitConnectPacket.passwordLength                             = strlen(Password);
+	adafruitConnectPacket.username                                   = (uint8_t *) Username;
+	adafruitConnectPacket.usernameLength                             = strlen(Username);
+	
+	
+	
+	
+	result=MQTT_CreateConnectPacket(&adafruitConnectPacket);
+	
+	return result;
+	
+}
 
 
 
@@ -272,11 +312,10 @@ int main(void){
 	
 	atmel_start_init();
  	motor_dir_port_init();
- 	//LEFT_WHEEL_TCB3_PWM_init();
-	//RIGHT_WHEEL_TCB1_PWM_init();
+ 	LEFT_WHEEL_TCB3_PWM_init();
+	RIGHT_WHEEL_TCB1_PWM_init();
  	
- 	
-      sei();
+	sei();
  
  	/* Initialize BSP */
  	nm_bsp_init();
@@ -303,36 +342,17 @@ int main(void){
 	socketInit();
 	registerSocketCallback(socket_cb, NULL);
 
-
-	/* Initialize AP mode parameters structure with SSID, channel and OPEN security type. */
-	memset(&strM2MAPConfig, 0x00, sizeof(tstrM2MAPConfig));
-	strcpy((char *)&strM2MAPConfig.au8SSID, MAIN_WLAN_SSID);
-	strM2MAPConfig.u8ListenChannel = MAIN_WLAN_CHANNEL;
-	strM2MAPConfig.u8SecType       = MAIN_WLAN_AUTH;
-
-	strM2MAPConfig.au8DHCPServerIP[0] = 192;
-	strM2MAPConfig.au8DHCPServerIP[1] = 168;
-	strM2MAPConfig.au8DHCPServerIP[2] = 0;
-	strM2MAPConfig.au8DHCPServerIP[3] = 1;
-
- 
-/* Bring up AP mode with parameters structure. */
-// ret = m2m_wifi_enable_ap(&strM2MAPConfig);
-// if (M2M_SUCCESS != ret) {
-// 	uprintf("main: m2m_wifi_enable_ap call error!\r\n");
-// 	while (1) {
-// 	}
-// }
-
-// 	printf("AP mode started. You can connect to %s.\r\n", (char *)MAIN_WLAN_SSID);
-
-
 /* Connect to router. */
-	m2m_wifi_connect(
-	(char *)MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), MAIN_WLAN_AUTH, (char *)MAIN_WLAN_PSK, M2M_WIFI_CH_ALL);
+	m2m_wifi_connect(	(char *)MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), MAIN_WLAN_AUTH, (char *)MAIN_WLAN_PSK, M2M_WIFI_CH_ALL);
 
 //PORTB.DIR |= PIN5_bm;
 
+/* MQTT STUFF ?*/ 
+
+
+
+		
+mqtt_client_connect();
 	
 while (1) {
 	
@@ -366,4 +386,15 @@ while (1) {
 	}
 
 }
+}
+
+
+
+
+
+
+
+void received_from_adafruit(uint8_t *topic, uint8_t *payload){
+	
+	
 }
