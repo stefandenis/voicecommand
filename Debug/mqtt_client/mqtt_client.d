@@ -1,15 +1,20 @@
-mqtt/mqtt_core/mqtt_core.d mqtt/mqtt_core/mqtt_core.o: \
- ../mqtt/mqtt_core/mqtt_core.c \
+mqtt_client/mqtt_client.d mqtt_client/mqtt_client.o: \
+ ../mqtt_client/mqtt_client.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
+ ../winc/socket/include/socket.h ../winc/common/include/nm_common.h \
+ ../winc/bsp/include/nm_bsp.h ../winc/common/include/nm_debug.h \
+ ../winc/bsp/include/nm_bsp_internal.h ../winc/driver/include/m2m_types.h \
+ ../umqtt/umqtt.h ../cloud/cloud.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ ../utils/atomic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- ../include/timeout.h ../utils/compiler.h \
+ ../include/adc_basic.h ../utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include/avr/iom4809.h \
@@ -20,41 +25,55 @@ mqtt/mqtt_core/mqtt_core.d mqtt/mqtt_core/mqtt_core.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\builtins.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  ../utils/interrupt_avr8.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../mqtt/mqtt_core/mqtt_core.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\time.h \
- ../mqtt/mqtt_core/../mqtt_comm_bsd/mqtt_comm_layer.h \
- ../mqtt/mqtt_core/../mqtt_comm_bsd/../mqtt_exchange_buffer/mqtt_exchange_buffer.h \
- ../include/../winc/socket/include/socket.h \
- ../winc/common/include/nm_common.h ../winc/bsp/include/nm_bsp.h \
- ../winc/common/include/nm_debug.h ../winc/bsp/include/nm_bsp_internal.h \
- ../winc/driver/include/m2m_types.h ../mqtt/mqtt_core/../mqtt_config.h \
- ../mqtt/mqtt_core/../mqtt_packetTransfer_interface.h \
- ../mqtt/mqtt_core/../../debug_print.h \
- ../mqtt/mqtt_core/../../config/IoT_Sensor_Node_config.h \
- ../mqtt/mqtt_core/../../config/../winc/driver/include/m2m_wifi.h \
- ../winc/driver/source/nmdrv.h ../config/conf_winc.h
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
+ ../cloud/network.h ../cloud/cloud.h \
+ ../winc/socket/include/m2m_socket_host_if.h \
+ ../winc/socket/include/socket.h ../winc/driver/include/m2m_wifi.h \
+ ../winc/driver/source/nmdrv.h ../winc/driver/include/m2m_periph.h \
+ ../include/timeout.h ../mqtt_client/mqtt_client.h \
+ ../mqtt_client/mqtt_client.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
+../winc/socket/include/socket.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
+../winc/common/include/nm_common.h:
+
+../winc/bsp/include/nm_bsp.h:
+
+../winc/common/include/nm_debug.h:
+
+../winc/bsp/include/nm_bsp_internal.h:
+
+../winc/driver/include/m2m_types.h:
+
+../umqtt/umqtt.h:
+
+../cloud/cloud.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+../utils/atomic.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
 
-../include/timeout.h:
+../include/adc_basic.h:
 
 ../utils/compiler.h:
 
@@ -78,40 +97,32 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\builtins.h:
 
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
+
 ../utils/interrupt_avr8.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
-../mqtt/mqtt_core/mqtt_core.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\time.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h:
 
-../mqtt/mqtt_core/../mqtt_comm_bsd/mqtt_comm_layer.h:
+../cloud/network.h:
 
-../mqtt/mqtt_core/../mqtt_comm_bsd/../mqtt_exchange_buffer/mqtt_exchange_buffer.h:
+../cloud/cloud.h:
 
-../include/../winc/socket/include/socket.h:
+../winc/socket/include/m2m_socket_host_if.h:
 
-../winc/common/include/nm_common.h:
+../winc/socket/include/socket.h:
 
-../winc/bsp/include/nm_bsp.h:
-
-../winc/common/include/nm_debug.h:
-
-../winc/bsp/include/nm_bsp_internal.h:
-
-../winc/driver/include/m2m_types.h:
-
-../mqtt/mqtt_core/../mqtt_config.h:
-
-../mqtt/mqtt_core/../mqtt_packetTransfer_interface.h:
-
-../mqtt/mqtt_core/../../debug_print.h:
-
-../mqtt/mqtt_core/../../config/IoT_Sensor_Node_config.h:
-
-../mqtt/mqtt_core/../../config/../winc/driver/include/m2m_wifi.h:
+../winc/driver/include/m2m_wifi.h:
 
 ../winc/driver/source/nmdrv.h:
 
-../config/conf_winc.h:
+../winc/driver/include/m2m_periph.h:
+
+../include/timeout.h:
+
+../mqtt_client/mqtt_client.h:
+
+../mqtt_client/mqtt_client.h:

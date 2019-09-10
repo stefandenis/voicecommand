@@ -33,6 +33,7 @@ LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
+../cloud/ \
 ../Config/ \
 ../Debug/ \
 ../Debug/ \
@@ -41,17 +42,16 @@ SUBDIRS :=  \
 ../Debug/mqtt/mqtt_comm_bsd/ \
 ../Debug/mqtt/mqtt_core/ \
 ../Debug/mqtt/mqtt_exchange_buffer/ \
+../Debug/mqtt_client/ \
 ../doxygen/ \
 ../doxygen/generator/ \
 ../examples/ \
 ../examples/include/ \
 ../examples/src/ \
 ../include/ \
-../mqtt/ \
-../mqtt/mqtt_comm_bsd/ \
-../mqtt/mqtt_core/ \
-../mqtt/mqtt_exchange_buffer/ \
+../mqtt_client/ \
 ../src/ \
+../umqtt/ \
 ../utils/ \
 ../utils/assembler/ \
 ../winc \
@@ -79,12 +79,12 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../atmel_start.c \
+../cloud/cloud.c \
+../cloud/network.c \
 ../debug_print.c \
 ../motoare.c \
-../mqtt/mqtt_comm_bsd/mqtt_comm_layer.c \
-../mqtt/mqtt_core/mqtt_core.c \
-../mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.c \
-../mqtt/mqtt_packetTransfer_interface.c \
+../mqtt_client/mqtt_client.c \
+../umqtt/umqtt.c \
 ../winc_init.c \
 ../driver_isr.c \
 ../examples/src/spi_basic_example.c \
@@ -130,12 +130,12 @@ ASM_SRCS +=
 
 OBJS +=  \
 atmel_start.o \
+cloud/cloud.o \
+cloud/network.o \
 debug_print.o \
 motoare.o \
-mqtt/mqtt_comm_bsd/mqtt_comm_layer.o \
-mqtt/mqtt_core/mqtt_core.o \
-mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.o \
-mqtt/mqtt_packetTransfer_interface.o \
+mqtt_client/mqtt_client.o \
+umqtt/umqtt.o \
 winc_init.o \
 driver_isr.o \
 examples/src/spi_basic_example.o \
@@ -174,12 +174,12 @@ winc/spi_flash/source/spi_flash.o
 
 OBJS_AS_ARGS +=  \
 atmel_start.o \
+cloud/cloud.o \
+cloud/network.o \
 debug_print.o \
 motoare.o \
-mqtt/mqtt_comm_bsd/mqtt_comm_layer.o \
-mqtt/mqtt_core/mqtt_core.o \
-mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.o \
-mqtt/mqtt_packetTransfer_interface.o \
+mqtt_client/mqtt_client.o \
+umqtt/umqtt.o \
 winc_init.o \
 driver_isr.o \
 examples/src/spi_basic_example.o \
@@ -218,12 +218,12 @@ winc/spi_flash/source/spi_flash.o
 
 C_DEPS +=  \
 atmel_start.d \
+cloud/cloud.d \
+cloud/network.d \
 debug_print.d \
 motoare.d \
-mqtt/mqtt_comm_bsd/mqtt_comm_layer.d \
-mqtt/mqtt_core/mqtt_core.d \
-mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.d \
-mqtt/mqtt_packetTransfer_interface.d \
+mqtt_client/mqtt_client.d \
+umqtt/umqtt.d \
 winc_init.d \
 driver_isr.d \
 examples/src/spi_basic_example.d \
@@ -262,12 +262,12 @@ winc/spi_flash/source/spi_flash.d
 
 C_DEPS_AS_ARGS +=  \
 atmel_start.d \
+cloud/cloud.d \
+cloud/network.d \
 debug_print.d \
 motoare.d \
-mqtt/mqtt_comm_bsd/mqtt_comm_layer.d \
-mqtt/mqtt_core/mqtt_core.d \
-mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.d \
-mqtt/mqtt_packetTransfer_interface.d \
+mqtt_client/mqtt_client.d \
+umqtt/umqtt.d \
 winc_init.d \
 driver_isr.d \
 examples/src/spi_basic_example.d \
@@ -325,6 +325,20 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
+cloud/cloud.o: ../cloud/cloud.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+cloud/network.o: ../cloud/network.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./debug_print.o: .././debug_print.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -339,28 +353,14 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-mqtt/mqtt_comm_bsd/mqtt_comm_layer.o: ../mqtt/mqtt_comm_bsd/mqtt_comm_layer.c
+mqtt_client/mqtt_client.o: ../mqtt_client/mqtt_client.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-mqtt/mqtt_core/mqtt_core.o: ../mqtt/mqtt_core/mqtt_core.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.o: ../mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-mqtt/mqtt_packetTransfer_interface.o: ../mqtt/mqtt_packetTransfer_interface.c
+umqtt/umqtt.o: ../umqtt/umqtt.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DTCPIP_BSD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\include" -I"../examples/include" -I"../include" -I"../utils" -I"../utils/assembler" -I".." -I"../cryptoauthlib" -I"../cryptoauthlib/lib" -I"../cryptoauthlib/lib/atcacert" -I"../cryptoauthlib/lib/basic" -I"../cryptoauthlib/lib/crypto" -I"../cryptoauthlib/lib/hal" -I"../cryptoauthlib/lib/host" -I"../winc" -I"../Config"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mshort-calls -g2 -Wall -mmcu=atmega4809 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.2.209\gcc\dev\atmega4809" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -4,17 +4,17 @@
 
 atmel_start.c
 
+cloud\cloud.c
+
+cloud\network.c
+
 debug_print.c
 
 motoare.c
 
-mqtt\mqtt_comm_bsd\mqtt_comm_layer.c
+mqtt_client\mqtt_client.c
 
-mqtt\mqtt_core\mqtt_core.c
-
-mqtt\mqtt_exchange_buffer\mqtt_exchange_buffer.c
-
-mqtt\mqtt_packetTransfer_interface.c
+umqtt\umqtt.c
 
 winc_init.c
 

@@ -1,7 +1,7 @@
 /*
-    \file   mqtt_packetPopulate.h
+    \file   mqtt_client.h
 
-    \brief  MQTT Packet Populate header file.
+    \brief  MQTT Client header file.
 
     (c) 2018 Microchip Technology Inc. and its subsidiaries.
 
@@ -25,19 +25,27 @@
     SOFTWARE.
 */
 
-#ifndef MQTT_PACKET_POPULATE_H
-#define MQTT_PACKET_POPULATE_H
+#ifndef MQTT_CLIENT_H_
+#define MQTT_CLIENT_H_
 
-#include <stdbool.h>
+#define PASSWORD_SPACE    456
+#define TOPIC_SIZE        50
+#define ID_SIZE           41
+#define USERNAME_SIZE     15
+#define IO_KEY_SIZE       40
+
 #include <stdint.h>
+#include "winc/socket/include/socket.h"
 
-extern char mqttPassword[];
-extern char cid[];
-extern char mqttTopic[];
-extern char mqttHostName[];
+extern char mqtt_topic[];
+extern char mqtt_client_id[];
+extern char username[];
+extern char IO_KEY[];
 
-void MQTT_CLIENT_publish(uint8_t *data, uint16_t len);
+void initUmqtt(SOCKET *sock);
+void MQTT_CLIENT_publish(uint8_t *data, uint8_t datalen);
 void MQTT_CLIENT_receive(uint8_t *data, uint8_t len);
 void MQTT_CLIENT_connect(void);
+uint8_t MQTT_CLIENT_isConnected(void);
 
-#endif /* MQTT_PACKET_POPULATE_H */
+#endif /* MQTT_CLIENT_H_ */

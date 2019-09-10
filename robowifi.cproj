@@ -310,7 +310,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="adafruit\" />
+    <Folder Include="cloud\" />
     <Folder Include="Config\" />
     <Folder Include="Debug\" />
     <Folder Include="Debug\" />
@@ -319,17 +319,16 @@
     <Folder Include="Debug\mqtt\mqtt_comm_bsd\" />
     <Folder Include="Debug\mqtt\mqtt_core\" />
     <Folder Include="Debug\mqtt\mqtt_exchange_buffer\" />
+    <Folder Include="Debug\mqtt_client\" />
     <Folder Include="doxygen\" />
     <Folder Include="doxygen\generator\" />
     <Folder Include="examples\" />
     <Folder Include="examples\include\" />
     <Folder Include="examples\src\" />
     <Folder Include="include\" />
-    <Folder Include="mqtt\" />
-    <Folder Include="mqtt\mqtt_comm_bsd\" />
-    <Folder Include="mqtt\mqtt_core\" />
-    <Folder Include="mqtt\mqtt_exchange_buffer\" />
+    <Folder Include="mqtt_client\" />
     <Folder Include="src\" />
+    <Folder Include="umqtt\" />
     <Folder Include="utils\" />
     <Folder Include="utils\assembler\" />
     <Folder Include="winc" />
@@ -354,13 +353,22 @@
     <Folder Include="winc\spi_flash\source" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adafruit\adafruit_service.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="atmel_start.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="atmel_start.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cloud\cloud.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cloud\cloud.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cloud\network.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cloud\network.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Config\IoT_Sensor_Node_config.h">
@@ -378,31 +386,16 @@
     <Compile Include="motoare.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="mqtt\mqtt_comm_bsd\mqtt_comm_layer.c">
+    <Compile Include="mqtt_client\mqtt_client.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="mqtt\mqtt_comm_bsd\mqtt_comm_layer.h">
+    <Compile Include="mqtt_client\mqtt_client.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="mqtt\mqtt_config.h">
+    <Compile Include="umqtt\umqtt.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="mqtt\mqtt_core\mqtt_core.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="mqtt\mqtt_core\mqtt_core.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="mqtt\mqtt_exchange_buffer\mqtt_exchange_buffer.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="mqtt\mqtt_exchange_buffer\mqtt_exchange_buffer.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="mqtt\mqtt_packetTransfer_interface.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="mqtt\mqtt_packetTransfer_interface.h">
+    <Compile Include="umqtt\umqtt.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="winc_init.h">
@@ -695,6 +688,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Debug\mqtt_client\umqtt.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\mqtt_client\umqtt.o">
+      <SubType>compile</SubType>
+    </None>
     <None Include="doxygen\adc.dox">
       <SubType>compile</SubType>
     </None>
@@ -735,6 +734,9 @@
       <SubType>compile</SubType>
     </None>
     <None Include="doxygen\usart_basic.dox">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="umqtt\LICENSE">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>

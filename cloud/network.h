@@ -1,8 +1,4 @@
-/*
-    \file   crypto_client.h
-
-    \brief  Crypto Client header file.
-
+/* 
     (c) 2018 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip software and any
@@ -25,20 +21,26 @@
     SOFTWARE.
 */
 
-#ifndef CRYPTO_CLIENT_H
-#define CRYPTO_CLIENT_H
+#ifndef NETWORK_H_
+#define NETWORK_H_
 
-#define ERROR 1
-#define NO_ERROR 0
+#include "cloud.h"
+//#include "crypto_client.h"
+//#include "ecc_functions_tls.h"
+#include "winc/socket/include/m2m_socket_host_if.h"
+#include "winc/socket/include/socket.h"
+#include "winc/driver/include/m2m_wifi.h"
+#include "winc/driver/include/m2m_periph.h"
 
-#include <stdint.h>
-#include "cryptoauthlib/lib/atca_iface.h"
+extern uint8_t gau8SocketBuffer[];
+extern SOCKET tcpClientSocket;
 
-extern ATCAIfaceCfg cfg_ateccx08a_i2c_custom;
-extern uint8_t      cryptoDeviceInitialized;
+void NETWORK_wifiSocketHandler(SOCKET sock, uint8 u8Msg, void *pMsg);
+void NETWORK_wifiCallback(uint8 u8MsgType, void *pvMsg);
+void NETWORK_wifiSslCallback(uint8 u8MsgType, void *pvMsg);
+void NETWORK_dnsCallback(uint8* domainName, uint32 serverIP);
+void NETWORK_pingCallback(uint32 u32IPAddr, uint32 u32RTT, uint8 u8ErrorCode);
 
-uint8_t CRYPTO_CLIENT_createJWT(char *buf, size_t buflen, uint32_t ts, const char *projectId);
-uint8_t CRYPTO_CLIENT_printPublicKey(char *s);
-uint8_t CRYPTO_CLIENT_printSerialNumber(char *s);
+extern uint32_t endpoint_ip;
 
-#endif /* CRYPTO_CLIENT_H */
+#endif /* NETWORK_H_ */
